@@ -86,6 +86,7 @@ namespace Client
             this.Controls.Add(this.btSpin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "Wheel";
             this.Text = "Wheel";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

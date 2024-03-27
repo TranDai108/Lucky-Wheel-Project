@@ -12,6 +12,7 @@ namespace Client
 {
     public partial class Wheel : Form
     {
+        int spin_count = 0;
         bool wheelIsMoved;
         float wheelTimes;
         Timer wheelTimer;
@@ -102,6 +103,8 @@ namespace Client
         }
         private void btSpin_Click(object sender, EventArgs e)
         {
+            if (spin_count == 0)
+                btSpin.Enabled = false;
             wheelIsMoved = true;
             Random rand = new Random();
             wheelTimes = rand.Next(150, 200);    //random số vòng quay     
