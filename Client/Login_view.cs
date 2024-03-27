@@ -20,8 +20,8 @@ namespace Client
         private void lbStart_Click(object sender, EventArgs e)
         {
             ClientView client = new ClientView();
-            client.Show();
-            this.Visible = false;
+            client.ShowDialog();
+
         }
     }
 }

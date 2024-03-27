@@ -36,7 +36,7 @@ namespace Client
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbComment = new System.Windows.Forms.Label();
             this.btnU = new System.Windows.Forms.Button();
             this.btnT = new System.Windows.Forms.Button();
             this.btnS = new System.Windows.Forms.Button();
@@ -59,7 +59,6 @@ namespace Client
             this.btnC = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
             this.btnA = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -72,6 +71,7 @@ namespace Client
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbQuestion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +80,7 @@ namespace Client
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(295, 153);
+            this.label1.Location = new System.Drawing.Point(227, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 34);
             this.label1.TabIndex = 2;
@@ -153,14 +153,15 @@ namespace Client
             this.textBox4.Size = new System.Drawing.Size(91, 36);
             this.textBox4.TabIndex = 3;
             // 
-            // label6
+            // lbComment
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.BackColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(25, 474);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 185);
-            this.label6.TabIndex = 4;
+            this.lbComment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbComment.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbComment.Location = new System.Drawing.Point(34, 398);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(339, 70);
+            this.lbComment.TabIndex = 4;
+            this.lbComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnU
             // 
@@ -173,7 +174,6 @@ namespace Client
             this.btnU.TabIndex = 0;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = false;
-            this.btnU.Click += new System.EventHandler(this.btnU_Click);
             this.btnU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnT
@@ -187,7 +187,6 @@ namespace Client
             this.btnT.TabIndex = 0;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = false;
-            this.btnT.Click += new System.EventHandler(this.btnT_Click);
             this.btnT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnS
@@ -201,7 +200,6 @@ namespace Client
             this.btnS.TabIndex = 0;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = false;
-            this.btnS.Click += new System.EventHandler(this.btnS_Click);
             this.btnS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnV
@@ -215,7 +213,6 @@ namespace Client
             this.btnV.TabIndex = 0;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = false;
-            this.btnV.Click += new System.EventHandler(this.btnV_Click);
             this.btnV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnR
@@ -229,7 +226,6 @@ namespace Client
             this.btnR.TabIndex = 0;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = false;
-            this.btnR.Click += new System.EventHandler(this.btnR_Click);
             this.btnR.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnX
@@ -243,7 +239,6 @@ namespace Client
             this.btnX.TabIndex = 0;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
-            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             this.btnX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnQ
@@ -257,7 +252,6 @@ namespace Client
             this.btnQ.TabIndex = 0;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = false;
-            this.btnQ.Click += new System.EventHandler(this.btnQ_Click);
             this.btnQ.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnY
@@ -271,7 +265,6 @@ namespace Client
             this.btnY.TabIndex = 0;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = false;
-            this.btnY.Click += new System.EventHandler(this.btnY_Click);
             this.btnY.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnP
@@ -285,7 +278,6 @@ namespace Client
             this.btnP.TabIndex = 0;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = false;
-            this.btnP.Click += new System.EventHandler(this.btnP_Click);
             this.btnP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnO
@@ -299,7 +291,6 @@ namespace Client
             this.btnO.TabIndex = 0;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = false;
-            this.btnO.Click += new System.EventHandler(this.btnO_Click);
             this.btnO.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnN
@@ -313,7 +304,6 @@ namespace Client
             this.btnN.TabIndex = 0;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = false;
-            this.btnN.Click += new System.EventHandler(this.btnN_Click_1);
             this.btnN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnM
@@ -327,7 +317,6 @@ namespace Client
             this.btnM.TabIndex = 0;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = false;
-            this.btnM.Click += new System.EventHandler(this.btnM_Click);
             this.btnM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnL
@@ -341,7 +330,6 @@ namespace Client
             this.btnL.TabIndex = 0;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = false;
-            this.btnL.Click += new System.EventHandler(this.btnL_Click);
             this.btnL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnK
@@ -355,7 +343,6 @@ namespace Client
             this.btnK.TabIndex = 0;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = false;
-            this.btnK.Click += new System.EventHandler(this.btnK_Click);
             this.btnK.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnI
@@ -369,7 +356,6 @@ namespace Client
             this.btnI.TabIndex = 0;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = false;
-            this.btnI.Click += new System.EventHandler(this.btnI_Click);
             this.btnI.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnH
@@ -383,7 +369,6 @@ namespace Client
             this.btnH.TabIndex = 0;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = false;
-            this.btnH.Click += new System.EventHandler(this.btnH_Click);
             this.btnH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnG
@@ -397,7 +382,6 @@ namespace Client
             this.btnG.TabIndex = 0;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = false;
-            this.btnG.Click += new System.EventHandler(this.btnG_Click);
             this.btnG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnE
@@ -411,7 +395,6 @@ namespace Client
             this.btnE.TabIndex = 0;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = false;
-            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             this.btnE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnD
@@ -425,7 +408,6 @@ namespace Client
             this.btnD.TabIndex = 0;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = false;
-            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             this.btnD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnC
@@ -439,7 +421,6 @@ namespace Client
             this.btnC.TabIndex = 0;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = false;
-            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             this.btnC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnB
@@ -453,7 +434,6 @@ namespace Client
             this.btnB.TabIndex = 0;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = false;
-            this.btnB.Click += new System.EventHandler(this.btnB_Click);
             this.btnB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnA
@@ -467,106 +447,117 @@ namespace Client
             this.btnA.TabIndex = 0;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = false;
-            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             this.btnA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(298, 190);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(537, 86);
-            this.textBox5.TabIndex = 5;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(232, 320);
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox6.Location = new System.Drawing.Point(866, 317);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(53, 50);
             this.textBox6.TabIndex = 6;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox6.Tag = "Ans";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(299, 320);
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox7.Location = new System.Drawing.Point(799, 317);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(53, 50);
             this.textBox7.TabIndex = 6;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox7.Tag = "Ans";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(367, 320);
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox8.Location = new System.Drawing.Point(518, 317);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(53, 50);
             this.textBox8.TabIndex = 6;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox8.Tag = "Ans";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(435, 320);
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox9.Location = new System.Drawing.Point(659, 317);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(53, 50);
             this.textBox9.TabIndex = 6;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox9.Tag = "Ans";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(503, 320);
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox10.Location = new System.Drawing.Point(300, 317);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(53, 50);
             this.textBox10.TabIndex = 6;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox10.Tag = "Ans";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(574, 320);
+            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox11.Location = new System.Drawing.Point(729, 317);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(53, 50);
             this.textBox11.TabIndex = 6;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox11.Tag = "Ans";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(641, 320);
+            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox12.Location = new System.Drawing.Point(590, 317);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(53, 50);
             this.textBox12.TabIndex = 6;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox12.Tag = "Ans";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(777, 320);
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox13.Location = new System.Drawing.Point(442, 317);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(53, 50);
             this.textBox13.TabIndex = 6;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox13.Tag = "Ans";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(709, 320);
+            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox14.Location = new System.Drawing.Point(370, 317);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(53, 50);
             this.textBox14.TabIndex = 6;
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox14.Tag = "Ans";
+            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(845, 320);
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox15.Location = new System.Drawing.Point(230, 317);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(53, 50);
             this.textBox15.TabIndex = 6;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox15.Tag = "Ans";
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -592,6 +583,17 @@ namespace Client
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbQuestion
+            // 
+            this.lbQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbQuestion.BackColor = System.Drawing.Color.White;
+            this.lbQuestion.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuestion.Location = new System.Drawing.Point(230, 201);
+            this.lbQuestion.Name = "lbQuestion";
+            this.lbQuestion.Size = new System.Drawing.Size(689, 90);
+            this.lbQuestion.TabIndex = 9;
+            this.lbQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -602,6 +604,7 @@ namespace Client
             this.BackgroundImage = global::Client.Properties.Resources.bgclient;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 695);
+            this.Controls.Add(this.lbQuestion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox15);
@@ -614,9 +617,8 @@ namespace Client
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.btnA);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbComment);
             this.Controls.Add(this.btnB);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.btnC);
@@ -648,6 +650,8 @@ namespace Client
             this.MaximizeBox = false;
             this.Name = "ClientView";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ClientView_Load);
+            this.Leave += new System.EventHandler(this.ClientView_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,7 +665,7 @@ namespace Client
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbComment;
         private System.Windows.Forms.Button btnU;
         private System.Windows.Forms.Button btnT;
         private System.Windows.Forms.Button btnS;
@@ -684,7 +688,6 @@ namespace Client
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnB;
         private System.Windows.Forms.Button btnA;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
@@ -697,6 +700,7 @@ namespace Client
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbQuestion;
     }
 }
 
