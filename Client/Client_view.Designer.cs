@@ -102,7 +102,7 @@ namespace Client
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(986, 238);
+            this.label3.Location = new System.Drawing.Point(986, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 29);
             this.label3.TabIndex = 2;
@@ -112,7 +112,7 @@ namespace Client
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(1052, 166);
+            this.textBox2.Location = new System.Drawing.Point(1052, 147);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(91, 35);
@@ -121,7 +121,7 @@ namespace Client
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(1052, 275);
+            this.textBox3.Location = new System.Drawing.Point(1052, 256);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(91, 35);
@@ -532,7 +532,7 @@ namespace Client
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(986, 134);
+            this.label2.Location = new System.Drawing.Point(986, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 29);
             this.label2.TabIndex = 7;
