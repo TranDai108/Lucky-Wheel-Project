@@ -174,6 +174,7 @@ namespace Client
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = false;
             this.btnU.Click += new System.EventHandler(this.btnU_Click);
+            this.btnU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnT
             // 
@@ -187,6 +188,7 @@ namespace Client
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = false;
             this.btnT.Click += new System.EventHandler(this.btnT_Click);
+            this.btnT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnS
             // 
@@ -200,6 +202,7 @@ namespace Client
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = false;
             this.btnS.Click += new System.EventHandler(this.btnS_Click);
+            this.btnS.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnV
             // 
@@ -213,6 +216,7 @@ namespace Client
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = false;
             this.btnV.Click += new System.EventHandler(this.btnV_Click);
+            this.btnV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnR
             // 
@@ -226,6 +230,7 @@ namespace Client
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = false;
             this.btnR.Click += new System.EventHandler(this.btnR_Click);
+            this.btnR.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnX
             // 
@@ -239,6 +244,7 @@ namespace Client
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            this.btnX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnQ
             // 
@@ -252,6 +258,7 @@ namespace Client
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = false;
             this.btnQ.Click += new System.EventHandler(this.btnQ_Click);
+            this.btnQ.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnY
             // 
@@ -265,6 +272,7 @@ namespace Client
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = false;
             this.btnY.Click += new System.EventHandler(this.btnY_Click);
+            this.btnY.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnP
             // 
@@ -278,6 +286,7 @@ namespace Client
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = false;
             this.btnP.Click += new System.EventHandler(this.btnP_Click);
+            this.btnP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnO
             // 
@@ -291,6 +300,7 @@ namespace Client
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = false;
             this.btnO.Click += new System.EventHandler(this.btnO_Click);
+            this.btnO.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnN
             // 
@@ -304,6 +314,7 @@ namespace Client
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = false;
             this.btnN.Click += new System.EventHandler(this.btnN_Click_1);
+            this.btnN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnM
             // 
@@ -317,6 +328,7 @@ namespace Client
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = false;
             this.btnM.Click += new System.EventHandler(this.btnM_Click);
+            this.btnM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnL
             // 
@@ -330,6 +342,7 @@ namespace Client
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = false;
             this.btnL.Click += new System.EventHandler(this.btnL_Click);
+            this.btnL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnK
             // 
@@ -343,6 +356,7 @@ namespace Client
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = false;
             this.btnK.Click += new System.EventHandler(this.btnK_Click);
+            this.btnK.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnI
             // 
@@ -356,6 +370,7 @@ namespace Client
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = false;
             this.btnI.Click += new System.EventHandler(this.btnI_Click);
+            this.btnI.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnH
             // 
@@ -369,6 +384,7 @@ namespace Client
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = false;
             this.btnH.Click += new System.EventHandler(this.btnH_Click);
+            this.btnH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnG
             // 
@@ -382,6 +398,7 @@ namespace Client
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = false;
             this.btnG.Click += new System.EventHandler(this.btnG_Click);
+            this.btnG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnE
             // 
@@ -395,6 +412,7 @@ namespace Client
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = false;
             this.btnE.Click += new System.EventHandler(this.btnE_Click);
+            this.btnE.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnD
             // 
@@ -408,6 +426,7 @@ namespace Client
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = false;
             this.btnD.Click += new System.EventHandler(this.btnD_Click);
+            this.btnD.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnC
             // 
@@ -421,6 +440,7 @@ namespace Client
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = false;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
+            this.btnC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnB
             // 
@@ -434,6 +454,7 @@ namespace Client
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = false;
             this.btnB.Click += new System.EventHandler(this.btnB_Click);
+            this.btnB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // btnA
             // 
@@ -447,6 +468,7 @@ namespace Client
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = false;
             this.btnA.Click += new System.EventHandler(this.btnA_Click);
+            this.btnA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btwWord_MouseClick);
             // 
             // textBox5
             // 
