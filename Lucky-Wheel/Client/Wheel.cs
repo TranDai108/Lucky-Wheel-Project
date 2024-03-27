@@ -13,6 +13,7 @@ namespace Client
 {
     public partial class Wheel : Form
     {
+        int spin_turn = 0; // luot quay
         bool wheelIsMoved;
         float wheelTimes;
         Timer wheelTimer;
@@ -37,10 +38,10 @@ namespace Client
             public int stan;
 
             public LuckyCirlce()
-            {
-                tempObrazek = new Bitmap(Properties.Resources.z);
-                obrazek = new Bitmap(Properties.Resources.z);
-                wartosciStanu = new string[] {"12", "11", "10", "09", "08", "07", "06", "05", "04", "03", "02", "01" };
+            {                
+                obrazek = new Bitmap(Properties.Resources.wheel_new);
+                tempObrazek = new Bitmap(Properties.Resources.wheel_new);
+                wartosciStanu = new string[] {"+100", "x2", "+200", "Chia đôi", "+100", "+300", "x2", "+200", "Chia đôi", "+100"};
                 kat = 0.0f;
             }
 
@@ -91,7 +92,7 @@ namespace Client
                 wheelTimes--;
             }
 
-            koloFortuny.stan = Convert.ToInt32(Math.Ceiling(koloFortuny.kat / 30));
+            koloFortuny.stan = Convert.ToInt32(Math.Ceiling(koloFortuny.kat / 36)); //chia so do cua 1 phan vong quay
 
             if (koloFortuny.stan == 0)
             {
@@ -108,10 +109,18 @@ namespace Client
 
         private void btSpin_Click(object sender, EventArgs e)
         {
+            spin_turn--;
+            if (spin_turn == 0)
+                btSpin.Enabled = false;
             wheelIsMoved = true;
             Random rand = new Random();
             wheelTimes = rand.Next(150, 200);    //random số vòng quay     
             wheelTimer.Start();
+        }
+
+        private void Wheel_Load(object sender, EventArgs e)
+        {
+            spin_turn++;
         }
     }
 }

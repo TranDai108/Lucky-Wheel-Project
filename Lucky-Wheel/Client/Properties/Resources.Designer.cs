@@ -63,9 +63,9 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Colorful_Emotions_Wheel_SEL_Poster {
+        internal static System.Drawing.Bitmap wheel {
             get {
-                object obj = ResourceManager.GetObject("Colorful_Emotions_Wheel_SEL_Poster", resourceCulture);
+                object obj = ResourceManager.GetObject("wheel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap z {
+        internal static System.Drawing.Bitmap wheel_new {
             get {
-                object obj = ResourceManager.GetObject("z", resourceCulture);
+                object obj = ResourceManager.GetObject("wheel_new", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
