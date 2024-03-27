@@ -30,7 +30,7 @@ namespace Client
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbScore = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@ namespace Client
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btWheel = new System.Windows.Forms.Button();
             this.lbQuestion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -86,14 +86,17 @@ namespace Client
             this.label1.TabIndex = 2;
             this.label1.Text = "Câu hỏi";
             // 
-            // textBox1
+            // tbScore
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(532, 433);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 35);
-            this.textBox1.TabIndex = 3;
+            this.tbScore.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbScore.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbScore.Location = new System.Drawing.Point(532, 433);
+            this.tbScore.Multiline = true;
+            this.tbScore.Name = "tbScore";
+            this.tbScore.Size = new System.Drawing.Size(118, 35);
+            this.tbScore.TabIndex = 3;
+            this.tbScore.Text = "0";
+            this.tbScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -451,7 +454,9 @@ namespace Client
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox6.ForeColor = System.Drawing.Color.Black;
             this.textBox6.Location = new System.Drawing.Point(866, 317);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
@@ -462,7 +467,9 @@ namespace Client
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
             this.textBox7.Location = new System.Drawing.Point(799, 317);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -473,7 +480,9 @@ namespace Client
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox8.ForeColor = System.Drawing.Color.Black;
             this.textBox8.Location = new System.Drawing.Point(518, 317);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
@@ -484,7 +493,9 @@ namespace Client
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox9.ForeColor = System.Drawing.Color.Black;
             this.textBox9.Location = new System.Drawing.Point(659, 317);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
@@ -495,7 +506,9 @@ namespace Client
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox10.ForeColor = System.Drawing.Color.Black;
             this.textBox10.Location = new System.Drawing.Point(300, 317);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
@@ -506,7 +519,9 @@ namespace Client
             // 
             // textBox11
             // 
+            this.textBox11.Enabled = false;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox11.ForeColor = System.Drawing.Color.Black;
             this.textBox11.Location = new System.Drawing.Point(729, 317);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
@@ -517,7 +532,9 @@ namespace Client
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox12.ForeColor = System.Drawing.Color.Black;
             this.textBox12.Location = new System.Drawing.Point(590, 317);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -528,7 +545,9 @@ namespace Client
             // 
             // textBox13
             // 
+            this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox13.ForeColor = System.Drawing.Color.Black;
             this.textBox13.Location = new System.Drawing.Point(442, 317);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
@@ -539,7 +558,9 @@ namespace Client
             // 
             // textBox14
             // 
+            this.textBox14.Enabled = false;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox14.ForeColor = System.Drawing.Color.Black;
             this.textBox14.Location = new System.Drawing.Point(370, 317);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
@@ -550,7 +571,9 @@ namespace Client
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox15.ForeColor = System.Drawing.Color.Black;
             this.textBox15.Location = new System.Drawing.Point(230, 317);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
@@ -572,16 +595,16 @@ namespace Client
             this.label2.TabIndex = 7;
             this.label2.Text = "Người chơi 2";
             // 
-            // button1
+            // btWheel
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(914, 537);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 65);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Vòng Quay";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btWheel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btWheel.Location = new System.Drawing.Point(914, 537);
+            this.btWheel.Name = "btWheel";
+            this.btWheel.Size = new System.Drawing.Size(167, 65);
+            this.btWheel.TabIndex = 8;
+            this.btWheel.Text = "Vòng Quay";
+            this.btWheel.UseVisualStyleBackColor = true;
+            this.btWheel.Click += new System.EventHandler(this.btWheel_Click);
             // 
             // lbQuestion
             // 
@@ -605,7 +628,7 @@ namespace Client
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 695);
             this.Controls.Add(this.lbQuestion);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btWheel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox10);
@@ -626,7 +649,7 @@ namespace Client
             this.Controls.Add(this.btnD);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnE);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbScore);
             this.Controls.Add(this.btnG);
             this.Controls.Add(this.btnH);
             this.Controls.Add(this.label3);
@@ -651,7 +674,6 @@ namespace Client
             this.Name = "ClientView";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ClientView_Load);
-            this.Leave += new System.EventHandler(this.ClientView_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,7 +681,7 @@ namespace Client
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbScore;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -699,7 +721,7 @@ namespace Client
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btWheel;
         private System.Windows.Forms.Label lbQuestion;
     }
 }

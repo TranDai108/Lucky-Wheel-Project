@@ -17,6 +17,7 @@ namespace Client
         float wheelTimes;
         Timer wheelTimer;
         LuckyCirlce koloFortuny;
+        
         public Wheel()
         {
             InitializeComponent();
@@ -24,6 +25,10 @@ namespace Client
             wheelTimer.Interval = 30; // speed 
             wheelTimer.Tick += wheelTimer_Tick;
             koloFortuny = new LuckyCirlce();
+        }
+        public string get_res()
+        {
+            return label1.Text;
         }
         public class LuckyCirlce
         {
