@@ -71,15 +71,18 @@ namespace Client
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 27);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(295, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 34);
+            this.label1.Size = new System.Drawing.Size(105, 34);
             this.label1.TabIndex = 2;
             this.label1.Text = "Câu hỏi";
             // 
@@ -96,18 +99,20 @@ namespace Client
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1014, 200);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(986, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 25);
+            this.label3.Size = new System.Drawing.Size(160, 29);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Người chơi 2";
+            this.label3.Text = "Người chơi 3";
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(1055, 228);
+            this.textBox2.Location = new System.Drawing.Point(1052, 166);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(91, 35);
@@ -116,7 +121,7 @@ namespace Client
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Location = new System.Drawing.Point(1055, 315);
+            this.textBox3.Location = new System.Drawing.Point(1052, 275);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(91, 35);
@@ -128,8 +133,10 @@ namespace Client
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1055, 9);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1067, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 2;
@@ -140,20 +147,20 @@ namespace Client
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(1034, 45);
+            this.textBox4.Location = new System.Drawing.Point(1052, 45);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 49);
+            this.textBox4.Size = new System.Drawing.Size(91, 36);
             this.textBox4.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(543, 364);
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(25, 474);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 46);
+            this.label6.Size = new System.Drawing.Size(205, 185);
             this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
             // 
             // button22
             // 
@@ -422,15 +429,15 @@ namespace Client
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(309, 64);
+            this.textBox5.Location = new System.Drawing.Point(298, 190);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(537, 115);
+            this.textBox5.Size = new System.Drawing.Size(537, 86);
             this.textBox5.TabIndex = 5;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(239, 275);
+            this.textBox6.Location = new System.Drawing.Point(232, 320);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(53, 50);
@@ -440,7 +447,7 @@ namespace Client
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(306, 275);
+            this.textBox7.Location = new System.Drawing.Point(299, 320);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(53, 50);
@@ -450,7 +457,7 @@ namespace Client
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(374, 275);
+            this.textBox8.Location = new System.Drawing.Point(367, 320);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(53, 50);
@@ -460,7 +467,7 @@ namespace Client
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(442, 275);
+            this.textBox9.Location = new System.Drawing.Point(435, 320);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(53, 50);
@@ -470,7 +477,7 @@ namespace Client
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(510, 275);
+            this.textBox10.Location = new System.Drawing.Point(503, 320);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(53, 50);
@@ -480,7 +487,7 @@ namespace Client
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(581, 275);
+            this.textBox11.Location = new System.Drawing.Point(574, 320);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(53, 50);
@@ -490,7 +497,7 @@ namespace Client
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(648, 275);
+            this.textBox12.Location = new System.Drawing.Point(641, 320);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(53, 50);
@@ -500,7 +507,7 @@ namespace Client
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(784, 275);
+            this.textBox13.Location = new System.Drawing.Point(777, 320);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(53, 50);
@@ -510,7 +517,7 @@ namespace Client
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(716, 275);
+            this.textBox14.Location = new System.Drawing.Point(709, 320);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(53, 50);
@@ -520,7 +527,7 @@ namespace Client
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(852, 275);
+            this.textBox15.Location = new System.Drawing.Point(845, 320);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(53, 50);
@@ -532,12 +539,24 @@ namespace Client
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1014, 287);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(986, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Người chơi 3";
+            this.label2.Size = new System.Drawing.Size(160, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Người chơi 2";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(914, 537);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(167, 65);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Vòng Quay";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ClientView
             // 
@@ -546,7 +565,11 @@ namespace Client
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::Client.Properties.Resources.bgclient;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 695);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox14);
@@ -570,7 +593,6 @@ namespace Client
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
@@ -640,6 +662,7 @@ namespace Client
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
