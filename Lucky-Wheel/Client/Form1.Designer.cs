@@ -443,7 +443,6 @@ namespace Client
             this.textBox6.Size = new System.Drawing.Size(53, 50);
             this.textBox6.TabIndex = 6;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
@@ -453,7 +452,6 @@ namespace Client
             this.textBox7.Size = new System.Drawing.Size(53, 50);
             this.textBox7.TabIndex = 6;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox8
             // 
@@ -463,7 +461,6 @@ namespace Client
             this.textBox8.Size = new System.Drawing.Size(53, 50);
             this.textBox8.TabIndex = 6;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox9
             // 
@@ -473,7 +470,6 @@ namespace Client
             this.textBox9.Size = new System.Drawing.Size(53, 50);
             this.textBox9.TabIndex = 6;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox10
             // 
@@ -483,7 +479,6 @@ namespace Client
             this.textBox10.Size = new System.Drawing.Size(53, 50);
             this.textBox10.TabIndex = 6;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox11
             // 
@@ -493,7 +488,6 @@ namespace Client
             this.textBox11.Size = new System.Drawing.Size(53, 50);
             this.textBox11.TabIndex = 6;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox11.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox12
             // 
@@ -503,7 +497,6 @@ namespace Client
             this.textBox12.Size = new System.Drawing.Size(53, 50);
             this.textBox12.TabIndex = 6;
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox12.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox13
             // 
@@ -513,7 +506,6 @@ namespace Client
             this.textBox13.Size = new System.Drawing.Size(53, 50);
             this.textBox13.TabIndex = 6;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox13.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox14
             // 
@@ -523,7 +515,6 @@ namespace Client
             this.textBox14.Size = new System.Drawing.Size(53, 50);
             this.textBox14.TabIndex = 6;
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox14.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox15
             // 
@@ -533,7 +524,6 @@ namespace Client
             this.textBox15.Size = new System.Drawing.Size(53, 50);
             this.textBox15.TabIndex = 6;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label2
             // 

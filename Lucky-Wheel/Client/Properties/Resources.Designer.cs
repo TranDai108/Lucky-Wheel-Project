@@ -63,29 +63,9 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backgroundClient {
-            get {
-                object obj = ResourceManager.GetObject("backgroundClient", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bgclient {
             get {
                 object obj = ResourceManager.GetObject("bgclient", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bgr {
-            get {
-                object obj = ResourceManager.GetObject("bgr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
