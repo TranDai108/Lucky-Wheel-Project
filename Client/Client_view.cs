@@ -13,7 +13,7 @@ namespace Client
     public partial class ClientView : Form
     {
         string question = "Dãy núi nào cao nhất thế giới ?";
-        string answer = "HIMALAYA";
+        string answer = "EVEREST";
         string wheel_res;
         public ClientView()
         {
@@ -72,6 +72,17 @@ namespace Client
          
         }
 
+        //Su kien khi an vao 1 phim chu cai
+        private void btwWord_MouseClick(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Visible = false;
+            string input = button.Text;
+            show_ans(input);
+            allowState_button(comment(input));
+            check_win();
+        }
+
         //Show dap an ket qua sau khi nguoi dung an vao button 
         private void show_ans(string t)
         {
@@ -79,7 +90,7 @@ namespace Client
             {
                 if (control is TextBox && control.Tag != null)
                 {
-                    if (control.Tag.ToString() == "Ans")
+                    if (control.Tag.ToString() == "Ans")    
                     {
                         if (control.AccessibleName == t)
                             control.Text = t;
@@ -134,18 +145,7 @@ namespace Client
             }
             else
                 return false;
-        }
-        private void btwWord_MouseClick(object sender, MouseEventArgs e)
-        {
-            Button button = (Button)sender;
-            button.Visible = false;
-            string text = button.Text;
-            show_ans(text);
-            allowState_button(comment(text));            
-            check_win();
-            
-        }
-
+        }   
         private void ClientView_Load(object sender, EventArgs e)
         {
             int i = 0;
@@ -174,10 +174,8 @@ namespace Client
                 
             }
             allowState_button(true);
-        }
+        }       
 
-
-
-       
+        
     }
 }
