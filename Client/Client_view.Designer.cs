@@ -80,7 +80,7 @@ namespace Client
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(227, 140);
+            this.label1.Location = new System.Drawing.Point(225, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 34);
             this.label1.TabIndex = 2;
@@ -160,10 +160,11 @@ namespace Client
             // 
             this.lbComment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbComment.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbComment.Location = new System.Drawing.Point(34, 398);
+            this.lbComment.Location = new System.Drawing.Point(48, 378);
             this.lbComment.Name = "lbComment";
-            this.lbComment.Size = new System.Drawing.Size(339, 70);
+            this.lbComment.Size = new System.Drawing.Size(345, 70);
             this.lbComment.TabIndex = 4;
+            this.lbComment.Text = "Bạn phải quay vòng quay trước khi chọn đáp án";
             this.lbComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnU
@@ -457,7 +458,7 @@ namespace Client
             this.textBox6.Enabled = false;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(866, 317);
+            this.textBox6.Location = new System.Drawing.Point(864, 289);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(53, 50);
@@ -470,7 +471,7 @@ namespace Client
             this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(799, 317);
+            this.textBox7.Location = new System.Drawing.Point(797, 289);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(53, 50);
@@ -483,7 +484,7 @@ namespace Client
             this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(518, 317);
+            this.textBox8.Location = new System.Drawing.Point(516, 289);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(53, 50);
@@ -496,7 +497,7 @@ namespace Client
             this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(659, 317);
+            this.textBox9.Location = new System.Drawing.Point(657, 289);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(53, 50);
@@ -509,7 +510,7 @@ namespace Client
             this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox10.ForeColor = System.Drawing.Color.Black;
-            this.textBox10.Location = new System.Drawing.Point(300, 317);
+            this.textBox10.Location = new System.Drawing.Point(298, 289);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(53, 50);
@@ -522,7 +523,7 @@ namespace Client
             this.textBox11.Enabled = false;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox11.ForeColor = System.Drawing.Color.Black;
-            this.textBox11.Location = new System.Drawing.Point(729, 317);
+            this.textBox11.Location = new System.Drawing.Point(727, 289);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(53, 50);
@@ -535,7 +536,7 @@ namespace Client
             this.textBox12.Enabled = false;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox12.ForeColor = System.Drawing.Color.Black;
-            this.textBox12.Location = new System.Drawing.Point(590, 317);
+            this.textBox12.Location = new System.Drawing.Point(588, 289);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(53, 50);
@@ -548,7 +549,7 @@ namespace Client
             this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox13.ForeColor = System.Drawing.Color.Black;
-            this.textBox13.Location = new System.Drawing.Point(442, 317);
+            this.textBox13.Location = new System.Drawing.Point(440, 289);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(53, 50);
@@ -561,7 +562,7 @@ namespace Client
             this.textBox14.Enabled = false;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox14.ForeColor = System.Drawing.Color.Black;
-            this.textBox14.Location = new System.Drawing.Point(370, 317);
+            this.textBox14.Location = new System.Drawing.Point(368, 289);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(53, 50);
@@ -574,7 +575,7 @@ namespace Client
             this.textBox15.Enabled = false;
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox15.ForeColor = System.Drawing.Color.Black;
-            this.textBox15.Location = new System.Drawing.Point(230, 317);
+            this.textBox15.Location = new System.Drawing.Point(228, 289);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(53, 50);
@@ -611,7 +612,7 @@ namespace Client
             this.lbQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbQuestion.BackColor = System.Drawing.Color.White;
             this.lbQuestion.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuestion.Location = new System.Drawing.Point(230, 201);
+            this.lbQuestion.Location = new System.Drawing.Point(228, 173);
             this.lbQuestion.Name = "lbQuestion";
             this.lbQuestion.Size = new System.Drawing.Size(689, 90);
             this.lbQuestion.TabIndex = 9;

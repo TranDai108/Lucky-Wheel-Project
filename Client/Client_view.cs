@@ -12,25 +12,28 @@ namespace Client
 {
     public partial class ClientView : Form
     {
-        string question = "Con gi vo duyen nhat the gioi ?";
-        string answer = "CONNGUOI";
+        string question = "Dãy núi nào cao nhất thế giới ?";
+        string answer = "HIMALAYA";
         string wheel_res;
-        bool spinned = false;
-        bool chose_Word = false;
         public ClientView()
         {
             InitializeComponent();
             lbQuestion.Text = question;
+            
         }
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
             Wheel wheel = new Wheel();
+            
             wheel.ShowDialog();
             wheel_res = wheel.get_res();
             tbScore.Text = wheel_res;
-            spinned = true;
-            allowState_button(true);
+            foreach (Control control in Controls)
+            {
+                if (control is Button && control.Name != "btWheel")
+                    control.Enabled = true;
+            }
         }
         
         //Enable/Disable vong quay
@@ -42,6 +45,7 @@ namespace Client
                 btWheel.Enabled = true;
         }
 
+        //check  dap an va comment 
         private bool comment(string t)
         {
             int count_char = 0;
@@ -87,19 +91,23 @@ namespace Client
         //Chuyen trang thai button (enable / disable)
         private void allowState_button(bool check)
         {
-            if(check == false)
+            if(check == false) // tra loi sai khong duoc chon dap an nua
             {
                 foreach (Control control in Controls)
                 {
                     if (control is Button && control.Name != "btWheel")
                         control.Enabled = false;
+                    if (control is Button && control.Name == "btWheel")
+                        control.Enabled = false;
                 }
             }
-            else
+            else // tra loi dung lan luot thuc hien quay vong quay roi moi chon dap an
             {
                 foreach (Control control in Controls)
                 {
                     if (control is Button && control.Name != "btWheel")
+                        control.Enabled = false;
+                    if (control is Button && control.Name == "btWheel")
                         control.Enabled = true;
                 }
             }
@@ -165,7 +173,7 @@ namespace Client
                 }
                 
             }
-            allowState_button(false);
+            allowState_button(true);
         }
 
 
