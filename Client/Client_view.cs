@@ -7,20 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using Newtonsoft.Json.Linq;
 namespace Client
 {
     public partial class ClientView : Form
     {
-        string question = "Dãy núi nào cao nhất thế giới ?";
-        string answer = "EVEREST";
-        string wheel_res;
+
+        public string question = "";
+        public string answer = "";
+        private string wheel_res; // Wheel result
         public ClientView()
         {
             InitializeComponent();
-            lbQuestion.Text = question;
-            
+            randomQuestion();
         }
+
+        public void randomQuestion()
+        {
+            // Đọc nội dung từ tệp JSON
+            string jsonText = File.ReadAllText(@"C:\Users\Admin\source\repos\Lucky-Wheel-Project\questions.json");
+
+            // Phân tích nội dung JSON
+            JObject json = JObject.Parse(jsonText);
+
+            // Lấy ra mảng các câu hỏi từ đối tượng JSON
+            JArray questionsArray = (JArray)json["questions"];
+
+            // Chọn ngẫu nhiên một câu hỏi từ mảng
+            Random random = new Random();
+            int randomIndex = random.Next(0, questionsArray.Count);
+            JObject randomQuestionObject = (JObject)questionsArray[randomIndex];
+
+            question = (string)randomQuestionObject["question"];
+            answer = (string)randomQuestionObject["answer"];
+            lbQuestion.Text = question;
+        }
+
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -57,7 +80,7 @@ namespace Client
             if (count_char > 0)
             {
                 //Neu nguoi choi chon dung, duoc chon tiep 
-                lbComment.Text = "Có " + count_char + " ký tự " + t + " trong đáp án ";
+                lbComment.Text = "Có " + count_char + " ký tự " + t + " trong đáp án, bạn được quyền trả lời tiếp ";
                 changeState_wheel(false);
                 return true;
             }
@@ -65,7 +88,7 @@ namespace Client
             else
             {
                 // Neu nguoi choi chon sai, mat luot, chuyen sang luot choi cua nguoi choi tiep theo 
-                lbComment.Text = "Không có ký tự " + t + " nào trong đáp án ";
+                lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";
                 changeState_wheel(true);
                 return false;
             }
@@ -148,6 +171,8 @@ namespace Client
         }   
         private void ClientView_Load(object sender, EventArgs e)
         {
+            
+
             int i = 0;
             int ans_length = answer.Length + 1;
             foreach(Control control in Controls)

@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "question": "Ai là người sáng lập ra Microsoft?",
+      "answer": "BILLGATES"
+    },
+    {
+      "question": "Ai là nhà thơ được coi là quốc tử của Việt Nam?",
+      "answer": "HOCHIMINH"
+    },
+    {
+      "question": "Quốc gia nào có diện tích lớn nhất thế giới?",
+      "answer": "NGA"
+    },
+    {
+      "question": "Quốc gia nào nằm ở châu Âu?",
+      "answer": "PHAP"
+    },
+    {
+      "question": "Trong hệ mặt trời, hành tinh nào gần nhất với mặt trời?",
+      "answer": "MERCURY"
+    },
+    {
+      "question": "Ai là nhà phê bình âm nhạc nổi tiếng của Việt Nam?",
+      "answer": "TRINHCONGSON"
+    },
+    {
+      "question": "Ngôn ngữ lập trình nào được sử dụng nhiều nhất trên thế giới?",
+      "answer": "PYTHON"
+    },
+    {
+      "question": "Nước nào nằm ở bán đảo Ả Rập?",
+      "answer": "ANGLIA"
+    },
+    {
+      "question": "Nước nào nổi tiếng với ngọn núi Everest?",
+      "answer": "NEPAL"
+    },
+    {
+      "question": "Ai là người đầu tiên đặt chân lên mặt trăng?",
+      "answer": "ARMSTRONG"
+    }
+  ]
+}
