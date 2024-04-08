@@ -148,7 +148,7 @@
             // 
             // pictureBoxP3
             // 
-            this.pictureBoxP3.Location = new System.Drawing.Point(15, 74);
+            this.pictureBoxP3.Location = new System.Drawing.Point(23, 74);
             this.pictureBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxP3.Name = "pictureBoxP3";
             this.pictureBoxP3.Size = new System.Drawing.Size(214, 238);

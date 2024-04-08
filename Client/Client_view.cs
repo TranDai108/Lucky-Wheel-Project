@@ -25,8 +25,23 @@ namespace Client
 
         public void randomQuestion()
         {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string[] subDirectories = Directory.GetDirectories(currentDirectory);
+
+            string targetDirectoryName = "questions.json";
+            string foundDirectoryName = null;
+
+            foreach (string directory in subDirectories)
+            {
+                string directoryName = Path.GetFileName(directory);
+                if (directoryName == targetDirectoryName)
+                {
+                    foundDirectoryName = directoryName;
+                    break;
+                }
+            }
             // Đọc nội dung từ tệp JSON
-            string jsonText = File.ReadAllText(@"D:\NT106-LTMCB\DoAn\questions.json");
+            string jsonText = File.ReadAllText(foundDirectoryName);
 
             // Phân tích nội dung JSON
             JObject json = JObject.Parse(jsonText);
