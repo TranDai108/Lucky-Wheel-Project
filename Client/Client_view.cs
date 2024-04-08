@@ -26,7 +26,7 @@ namespace Client
         public void randomQuestion()
         {
             // Đọc nội dung từ tệp JSON
-            string jsonText = File.ReadAllText(@"C:\Users\Admin\source\repos\Lucky-Wheel-Project\questions.json");
+            string jsonText = File.ReadAllText(@"D:\NT106-LTMCB\DoAn\questions.json");
 
             // Phân tích nội dung JSON
             JObject json = JObject.Parse(jsonText);
