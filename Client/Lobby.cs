@@ -53,8 +53,8 @@ namespace Client
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            ClientSocket.datatype = "START";
-            ClientSocket.SendMessage("");
+            /*ClientSocket.datatype = "START";
+            ClientSocket.SendMessage("");*/
         }
         private void btnLeave_Click(object sender, EventArgs e)
         {

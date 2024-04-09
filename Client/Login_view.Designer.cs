@@ -30,7 +30,7 @@ namespace Client
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.lbStart = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,13 +49,13 @@ namespace Client
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Tên Người Chơi: ";
             // 
-            // textBoxName
+            // tbName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(620, 181);
-            this.textBoxName.Multiline = true;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(171, 35);
-            this.textBoxName.TabIndex = 1;
+            this.tbName.Location = new System.Drawing.Point(620, 181);
+            this.tbName.Multiline = true;
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(171, 35);
+            this.tbName.TabIndex = 1;
             // 
             // lbStart
             // 
@@ -63,7 +63,7 @@ namespace Client
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
             this.lbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStart.Location = new System.Drawing.Point(357, 447);
+            this.lbStart.Location = new System.Drawing.Point(303, 463);
             this.lbStart.Name = "lbStart";
             this.lbStart.Size = new System.Drawing.Size(173, 40);
             this.lbStart.TabIndex = 2;
@@ -121,7 +121,7 @@ namespace Client
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbStart);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
             this.Name = "Login_view";
             this.Text = "Login_view";
@@ -134,7 +134,7 @@ namespace Client
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lbStart;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

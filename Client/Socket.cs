@@ -18,7 +18,7 @@ namespace Client
         public static string datatype = "";
     }
 
-    public static void Connect(IPEndPoint serverEP)
+    /*public static void Connect(IPEndPoint serverEP)
     {
         clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         clientSocket.Connect(serverEP);
@@ -55,5 +55,5 @@ namespace Client
 
         //Terminate this receiving thread when clientSocket is disconnected
         //recvThread.Abort();
-    }
+    }*/
 }

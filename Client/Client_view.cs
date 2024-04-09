@@ -11,37 +11,28 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 namespace Client
 {
+    
     public partial class ClientView : Form
     {
-
+        public Player player;
         public string question = "";
         public string answer = "";
+        private int score = 0;
         private string wheel_res; // Wheel result
-        public ClientView()
+        public ClientView(string name)
         {
             InitializeComponent();
             randomQuestion();
+            player = new Player(name, 1, score);
         }
 
         public void randomQuestion()
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string[] subDirectories = Directory.GetDirectories(currentDirectory);
+            // Lấy filepath hiện tại và gán file questions.json vào 
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions.json");            
 
-            string targetDirectoryName = "questions.json";
-            string foundDirectoryName = null;
-
-            foreach (string directory in subDirectories)
-            {
-                string directoryName = Path.GetFileName(directory);
-                if (directoryName == targetDirectoryName)
-                {
-                    foundDirectoryName = directoryName;
-                    break;
-                }
-            }
             // Đọc nội dung từ tệp JSON
-            string jsonText = File.ReadAllText(foundDirectoryName);
+            string jsonText = File.ReadAllText(jsonFilePath);
 
             // Phân tích nội dung JSON
             JObject json = JObject.Parse(jsonText);
@@ -59,6 +50,37 @@ namespace Client
             lbQuestion.Text = question;
         }
 
+        public void ScoreHandle(string scoreEvent)
+        {
+            switch(scoreEvent)
+            {
+                case "+100":
+                    {
+                        score += 100;
+                    }
+                    break;
+                case "+200":
+                    {
+                        score += 200; 
+                    }
+                    break;
+                case "+300":
+                    {
+                        score += 300;
+                    }
+                    break;
+                case "x2":
+                    {
+                        score *= 2;
+                    }
+                    break;
+                case "Chia đôi":
+                    {
+                        score /= 2;
+                    }
+                    break;
+            }
+        }
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -66,12 +88,15 @@ namespace Client
             
             wheel.ShowDialog();
             wheel_res = wheel.get_res();
-            tbScore.Text = wheel_res;
+            ScoreHandle(wheel_res);
+            tbScore.Text = score.ToString();
             foreach (Control control in Controls)
             {
                 if (control is Button && control.Name != "btWheel")
                     control.Enabled = true;
             }
+            btWheel.Enabled = false;
+
         }
         
         //Enable/Disable vong quay
