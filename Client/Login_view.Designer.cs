@@ -32,8 +32,8 @@ namespace Client
             this.label1 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lbStart = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btCreate = new System.Windows.Forms.Button();
+            this.btJoin = new System.Windows.Forms.Button();
             this.textBoxIP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -61,34 +61,34 @@ namespace Client
             // 
             this.lbStart.AutoSize = true;
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
-            this.lbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStart.Font = new System.Drawing.Font("Playfair Display", 22F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStart.Location = new System.Drawing.Point(303, 463);
+            this.lbStart.Location = new System.Drawing.Point(309, 445);
             this.lbStart.Name = "lbStart";
-            this.lbStart.Size = new System.Drawing.Size(173, 40);
+            this.lbStart.Size = new System.Drawing.Size(208, 62);
             this.lbStart.TabIndex = 2;
             this.lbStart.Text = "BẮT ĐẦU";
             this.lbStart.Click += new System.EventHandler(this.lbStart_Click);
             // 
-            // button1
+            // btCreate
             // 
-            this.button1.Location = new System.Drawing.Point(620, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 61);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tạo Phòng";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btCreate.Location = new System.Drawing.Point(620, 351);
+            this.btCreate.Name = "btCreate";
+            this.btCreate.Size = new System.Drawing.Size(171, 61);
+            this.btCreate.TabIndex = 3;
+            this.btCreate.Text = "Tạo Phòng";
+            this.btCreate.UseVisualStyleBackColor = true;
+            this.btCreate.Click += new System.EventHandler(this.btCreate_Click);
             // 
-            // button2
+            // btJoin
             // 
-            this.button2.Location = new System.Drawing.Point(621, 445);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 58);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tham gia phòng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btJoin.Location = new System.Drawing.Point(621, 445);
+            this.btJoin.Name = "btJoin";
+            this.btJoin.Size = new System.Drawing.Size(170, 58);
+            this.btJoin.TabIndex = 4;
+            this.btJoin.Text = "Tham gia phòng";
+            this.btJoin.UseVisualStyleBackColor = true;
+            this.btJoin.Click += new System.EventHandler(this.btJoin_Click);
             // 
             // textBoxIP
             // 
@@ -118,8 +118,8 @@ namespace Client
             this.ClientSize = new System.Drawing.Size(822, 545);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxIP);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btJoin);
+            this.Controls.Add(this.btCreate);
             this.Controls.Add(this.lbStart);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
@@ -136,8 +136,8 @@ namespace Client
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Label lbStart;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btCreate;
+        private System.Windows.Forms.Button btJoin;
         private System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.Label label2;
     }
