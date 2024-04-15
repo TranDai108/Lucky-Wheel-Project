@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnLeave = new System.Windows.Forms.Button();
+            this.rtbNotify = new System.Windows.Forms.RichTextBox();
+            this.btLeave = new System.Windows.Forms.Button();
             this.groupBoxP3 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxP3 = new System.Windows.Forms.PictureBox();
             this.labelP3 = new System.Windows.Forms.Label();
             this.groupBoxP2 = new System.Windows.Forms.GroupBox();
             this.labelP2 = new System.Windows.Forms.Label();
-            this.groupBoxP1 = new System.Windows.Forms.GroupBox();
-            this.labelP1 = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.pictureBoxP3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxP2 = new System.Windows.Forms.PictureBox();
+            this.groupBoxP1 = new System.Windows.Forms.GroupBox();
             this.pictureBoxP1 = new System.Windows.Forms.PictureBox();
+            this.labelP1 = new System.Windows.Forms.Label();
+            this.btStart = new System.Windows.Forms.Button();
             this.groupBoxP3.SuspendLayout();
-            this.groupBoxP2.SuspendLayout();
-            this.groupBoxP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP3)).BeginInit();
+            this.groupBoxP2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP2)).BeginInit();
+            this.groupBoxP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP1)).BeginInit();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rtbNotify
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(795, 71);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(310, 374);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
+            this.rtbNotify.Location = new System.Drawing.Point(795, 71);
+            this.rtbNotify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rtbNotify.Name = "rtbNotify";
+            this.rtbNotify.Size = new System.Drawing.Size(310, 374);
+            this.rtbNotify.TabIndex = 12;
+            this.rtbNotify.Text = "";
             // 
-            // btnLeave
+            // btLeave
             // 
-            this.btnLeave.Location = new System.Drawing.Point(448, 474);
-            this.btnLeave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLeave.Name = "btnLeave";
-            this.btnLeave.Size = new System.Drawing.Size(130, 52);
-            this.btnLeave.TabIndex = 11;
-            this.btnLeave.Text = "Leave";
-            this.btnLeave.UseVisualStyleBackColor = true;
+            this.btLeave.Location = new System.Drawing.Point(448, 474);
+            this.btLeave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btLeave.Name = "btLeave";
+            this.btLeave.Size = new System.Drawing.Size(130, 52);
+            this.btLeave.TabIndex = 11;
+            this.btLeave.Text = "Thoát phòng";
+            this.btLeave.UseVisualStyleBackColor = true;
+            this.btLeave.Click += new System.EventHandler(this.btLeave_Click);
             // 
             // groupBoxP3
             // 
@@ -75,10 +76,19 @@
             this.groupBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP3.Name = "groupBoxP3";
             this.groupBoxP3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxP3.Size = new System.Drawing.Size(243, 385);
+            this.groupBoxP3.Size = new System.Drawing.Size(259, 385);
             this.groupBoxP3.TabIndex = 8;
             this.groupBoxP3.TabStop = false;
             this.groupBoxP3.Text = "PLAYER 3";
+            // 
+            // pictureBoxP3
+            // 
+            this.pictureBoxP3.Location = new System.Drawing.Point(23, 74);
+            this.pictureBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxP3.Name = "pictureBoxP3";
+            this.pictureBoxP3.Size = new System.Drawing.Size(214, 238);
+            this.pictureBoxP3.TabIndex = 2;
+            this.pictureBoxP3.TabStop = false;
             // 
             // labelP3
             // 
@@ -113,6 +123,16 @@
             this.labelP2.TabIndex = 3;
             this.labelP2.Text = "...";
             // 
+            // pictureBoxP2
+            // 
+            this.pictureBoxP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxP2.Location = new System.Drawing.Point(15, 74);
+            this.pictureBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxP2.Name = "pictureBoxP2";
+            this.pictureBoxP2.Size = new System.Drawing.Size(214, 238);
+            this.pictureBoxP2.TabIndex = 2;
+            this.pictureBoxP2.TabStop = false;
+            // 
             // groupBoxP1
             // 
             this.groupBoxP1.Controls.Add(this.pictureBoxP1);
@@ -126,45 +146,6 @@
             this.groupBoxP1.TabStop = false;
             this.groupBoxP1.Text = "PLAYER 1";
             // 
-            // labelP1
-            // 
-            this.labelP1.AutoSize = true;
-            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelP1.Location = new System.Drawing.Point(108, 341);
-            this.labelP1.Name = "labelP1";
-            this.labelP1.Size = new System.Drawing.Size(30, 26);
-            this.labelP1.TabIndex = 0;
-            this.labelP1.Text = "...";
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(219, 474);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(132, 52);
-            this.btnStart.TabIndex = 6;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // pictureBoxP3
-            // 
-            this.pictureBoxP3.Location = new System.Drawing.Point(23, 74);
-            this.pictureBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBoxP3.Name = "pictureBoxP3";
-            this.pictureBoxP3.Size = new System.Drawing.Size(214, 238);
-            this.pictureBoxP3.TabIndex = 2;
-            this.pictureBoxP3.TabStop = false;
-            // 
-            // pictureBoxP2
-            // 
-            this.pictureBoxP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxP2.Location = new System.Drawing.Point(15, 74);
-            this.pictureBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBoxP2.Name = "pictureBoxP2";
-            this.pictureBoxP2.Size = new System.Drawing.Size(214, 238);
-            this.pictureBoxP2.TabIndex = 2;
-            this.pictureBoxP2.TabStop = false;
-            // 
             // pictureBoxP1
             // 
             this.pictureBoxP1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -175,27 +156,48 @@
             this.pictureBoxP1.TabIndex = 1;
             this.pictureBoxP1.TabStop = false;
             // 
+            // labelP1
+            // 
+            this.labelP1.AutoSize = true;
+            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelP1.Location = new System.Drawing.Point(108, 341);
+            this.labelP1.Name = "labelP1";
+            this.labelP1.Size = new System.Drawing.Size(30, 26);
+            this.labelP1.TabIndex = 0;
+            this.labelP1.Text = "...";
+            // 
+            // btStart
+            // 
+            this.btStart.Location = new System.Drawing.Point(219, 474);
+            this.btStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btStart.Name = "btStart";
+            this.btStart.Size = new System.Drawing.Size(132, 52);
+            this.btStart.TabIndex = 6;
+            this.btStart.Text = "Bắt đầu ";
+            this.btStart.UseVisualStyleBackColor = true;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
+            // 
             // Lobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1146, 607);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btnLeave);
+            this.Controls.Add(this.rtbNotify);
+            this.Controls.Add(this.btLeave);
             this.Controls.Add(this.groupBoxP3);
             this.Controls.Add(this.groupBoxP2);
             this.Controls.Add(this.groupBoxP1);
-            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btStart);
             this.Name = "Lobby";
             this.Text = "Lobby";
             this.groupBoxP3.ResumeLayout(false);
             this.groupBoxP3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP3)).EndInit();
             this.groupBoxP2.ResumeLayout(false);
             this.groupBoxP2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP2)).EndInit();
             this.groupBoxP1.ResumeLayout(false);
             this.groupBoxP1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP1)).EndInit();
             this.ResumeLayout(false);
 
@@ -203,8 +205,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnLeave;
+        private System.Windows.Forms.RichTextBox rtbNotify;
+        private System.Windows.Forms.Button btLeave;
         private System.Windows.Forms.GroupBox groupBoxP3;
         private System.Windows.Forms.PictureBox pictureBoxP3;
         private System.Windows.Forms.Label labelP3;
@@ -214,6 +216,6 @@
         private System.Windows.Forms.GroupBox groupBoxP1;
         private System.Windows.Forms.PictureBox pictureBoxP1;
         private System.Windows.Forms.Label labelP1;
-        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btStart;
     }
 }

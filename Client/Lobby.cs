@@ -19,17 +19,24 @@ namespace Client
         public Lobby()
         {
             InitializeComponent();
-            CheckForIllegalCrossThreadCalls = false;
+            //CheckForIllegalCrossThreadCalls = false;
             lobby = this;
-            btnStart.Visible = false;
+            btStart.Visible = false;
         }
         public void ShowStartButton()
         {
-            btnStart.Visible = true;
+            btStart.Visible = true;
         }
         public void Tempdisplay(string msg)
         {
-            richTextBox1.Text += msg + '\n';
+            if (rtbNotify.InvokeRequired)
+            {
+                rtbNotify.Invoke(new Action<string>(Tempdisplay), msg);
+                return;
+            }
+
+            rtbNotify.Text += msg + '\n';
+
         }
 
         public void DisplayConnectedPlayer(string name)
@@ -50,13 +57,14 @@ namespace Client
                 default:
                     break;
             }
-        }
-        private void btnStart_Click(object sender, EventArgs e)
+        }               
+        private void btStart_Click(object sender, EventArgs e)
         {
-            /*ClientSocket.datatype = "START";
-            ClientSocket.SendMessage("");*/
+            Client_Socket.datatype = "START";
+            Client_Socket.SendMessage("");
         }
-        private void btnLeave_Click(object sender, EventArgs e)
+
+        private void btLeave_Click(object sender, EventArgs e)
         {
             this.Close();
         }

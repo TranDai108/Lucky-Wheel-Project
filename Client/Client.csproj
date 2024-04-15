@@ -75,7 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Socket.cs" />
+    <Compile Include="Client_Socket.cs" />
     <Compile Include="Wheel.cs">
       <SubType>Form</SubType>
     </Compile>

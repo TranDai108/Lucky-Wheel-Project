@@ -89,7 +89,7 @@ namespace Client
             wheel.ShowDialog();
             wheel_res = wheel.get_res();
             ScoreHandle(wheel_res);
-            tbScore.Text = score.ToString();
+            
             foreach (Control control in Controls)
             {
                 if (control is Button && control.Name != "btWheel")
@@ -121,6 +121,7 @@ namespace Client
             {
                 //Neu nguoi choi chon dung, duoc chon tiep 
                 lbComment.Text = "Có " + count_char + " ký tự " + t + " trong đáp án, bạn được quyền trả lời tiếp ";
+                tbScore.Text = score.ToString();
                 changeState_wheel(false);
                 return true;
             }

@@ -39,12 +39,38 @@ namespace Client
         private void btCreate_Click(object sender, EventArgs e)
         {
             lobby = new Lobby();
+            IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), 11000);
+            Client_Socket.datatype = "CONNECT";
+            Client_Socket.Connect(serverEP);
+            Player.name = tbName.Text;
+            Client_Socket.SendMessage(Player.name);
+            lobby.ShowStartButton();
+            lobby.FormClosed += new FormClosedEventHandler(lobby_FormClosed);
+            this.Hide();
             lobby.Show();
+        }
+        void lobby_FormClosed(object sender, EventArgs e)
+        {
+            Client_Socket.datatype = "DISCONNECT";
+            Client_Socket.SendMessage(Player.name);
+            Client_Socket.clientSocket.Shutdown(System.Net.Sockets.SocketShutdown.Both);
+            Client_Socket.clientSocket.Close();
+            this.Show();
         }
 
         private void btJoin_Click(object sender, EventArgs e)
         {
+            IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), 11000);
+            Client_Socket.datatype = "CONNECT";
+            Client_Socket.Connect(serverEP);
+            lobby = new Lobby();
+            Client_Socket.SendMessage(tbName.Text);
 
+            Player.name = tbName.Text;
+
+            lobby.FormClosed += new FormClosedEventHandler(lobby_FormClosed);
+            this.Hide();
+            lobby.Show();
         }
     }
 }

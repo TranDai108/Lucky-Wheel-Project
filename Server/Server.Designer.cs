@@ -1,7 +1,7 @@
 ﻿
 namespace Server
 {
-    partial class Form1
+    partial class Server
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,33 @@ namespace Server
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.rtbServer = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // rtbServer
+            // 
+            this.rtbServer.Location = new System.Drawing.Point(61, 53);
+            this.rtbServer.Name = "rtbServer";
+            this.rtbServer.Size = new System.Drawing.Size(672, 334);
+            this.rtbServer.TabIndex = 0;
+            this.rtbServer.Text = "";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.rtbServer);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox rtbServer;
     }
 }
 

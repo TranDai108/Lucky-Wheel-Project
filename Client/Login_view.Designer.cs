@@ -92,11 +92,13 @@ namespace Client
             // 
             // textBoxIP
             // 
+            this.textBoxIP.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIP.Location = new System.Drawing.Point(620, 259);
             this.textBoxIP.Multiline = true;
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(171, 40);
             this.textBoxIP.TabIndex = 5;
+            this.textBoxIP.Text = "127.0.0.1";
             // 
             // label2
             // 
@@ -105,9 +107,9 @@ namespace Client
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(618, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Phòng";
+            this.label2.Text = "Địa chỉ IP phòng";
             // 
             // Login_view
             // 
