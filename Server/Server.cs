@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -22,7 +24,8 @@ namespace Server
         private static List<Player> connectedPlayers = new List<Player>();
 
         private static int currentturn = 1;
-
+        private static string question;
+        private static string answer;
         public Server()
         {
             InitializeComponent();
@@ -90,11 +93,115 @@ namespace Server
                         }
                     }
                     break;
+                case "DISCONNECT":
+                    {
+                        // Remove the disconnected player from list
+                        foreach (var player in connectedPlayers.ToList())
+                        {
+                            if (player.name == arrPayload[1])
+                            {
+                                player.playerSocket.Shutdown(SocketShutdown.Both);
+                                player.playerSocket.Close();
+                                connectedPlayers.Remove(player);
+                            }
+                        }
+                    }
+                    break;
+                case "START":
+                    {
+                        randomQuestion();
+                        foreach (var player in connectedPlayers)
+                        {                            
+                            string makemsg = "LOAD_QA;" + question + ";" + answer ;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Thread.Sleep(100);
+                        }
+                        SetUpPlayerTurn();
+                        connectedPlayers.Sort((x, y) => x.turn.CompareTo(y.turn));                        
+                        foreach (var player in connectedPlayers)
+                        {                            
+                            string makemsg = "INGAME;" + player.name + ";" + player.turn + ";" + player.score;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);                            
+                            Thread.Sleep(100);
+                        }
+
+
+                        foreach (var player in connectedPlayers)
+                        {
+                            foreach (var player_ in connectedPlayers)
+                            {
+                                if (player.name != player_.name)
+                                {
+                                    string makemsg = "OTHERINFO;" + player_.name + ";" + player_.turn + ";" + player.score;
+                                    byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                                    player.playerSocket.Send(buffer);
+                                    Console.WriteLine("Sendback: " + makemsg);
+                                    Thread.Sleep(100);
+                                }
+                            }
+                        }
+
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg = "SETUP;" + player.name;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Console.WriteLine("Sendback: " + makemsg);
+                            Thread.Sleep(100);
+                        }
+
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg_ = "TURN;" + connectedPlayers[currentturn - 1].name;
+                            byte[] buffer_ = Encoding.UTF8.GetBytes(makemsg_);
+                            player.playerSocket.Send(buffer_);
+                            Console.WriteLine("Sendback: " + makemsg_);
+                            Thread.Sleep(100);
+                        }
+                    }
+                    break;
                 default:
                     break;
 
             }
         }
+
+
+        public static void randomQuestion()
+        {
+            // Lấy filepath hiện tại và gán file questions.json vào 
+            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions18.json");
+
+            // Đọc nội dung từ tệp JSON
+            string jsonText = File.ReadAllText(jsonFilePath);
+
+            // Phân tích nội dung JSON
+            JObject json = JObject.Parse(jsonText);
+
+            // Lấy ra mảng các câu hỏi từ đối tượng JSON
+            JArray questionsArray = (JArray)json["questions"];
+
+            // Chọn ngẫu nhiên một câu hỏi từ mảng
+            Random random = new Random();
+            int randomIndex = random.Next(0, questionsArray.Count);
+            JObject randomQuestionObject = (JObject)questionsArray[randomIndex];
+
+            question = (string)randomQuestionObject["question"];
+            answer = (string)randomQuestionObject["answer"];            
+        }
+
+        private static void SetUpPlayerTurn()
+        {
+            int i = 1;
+            foreach (var player in connectedPlayers)
+            {
+                player.turn = i;
+                i++;
+            }
+        }
+
         private void UpdateRichTextBox(string message)
         {
             if (InvokeRequired)

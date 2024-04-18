@@ -80,9 +80,9 @@ namespace Client
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(225, 112);
+            this.label1.Location = new System.Drawing.Point(229, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 34);
+            this.label1.Size = new System.Drawing.Size(109, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Câu hỏi";
             // 
@@ -326,9 +326,9 @@ namespace Client
             this.lbQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbQuestion.BackColor = System.Drawing.Color.White;
             this.lbQuestion.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuestion.Location = new System.Drawing.Point(228, 173);
+            this.lbQuestion.Location = new System.Drawing.Point(228, 134);
             this.lbQuestion.Name = "lbQuestion";
-            this.lbQuestion.Size = new System.Drawing.Size(689, 90);
+            this.lbQuestion.Size = new System.Drawing.Size(689, 129);
             this.lbQuestion.TabIndex = 9;
             this.lbQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

@@ -47,7 +47,7 @@ namespace Client
                         msg += Encoding.UTF8.GetString(buffer, 0, bRead);
                     }
 
-                    //AnalyzingReturnMessage(msg);
+                    AnalyzingReturnMessage(msg);
                     Login_view.lobby.Tempdisplay(msg);
                 }
             }
@@ -65,7 +65,31 @@ namespace Client
                 case "LOBBYINFO":
                     {
                         Login_view.lobby.DisplayConnectedPlayer(Payload[1]);
-
+                    }
+                    break;
+                case "LOAD_QA":
+                    {
+                        GamePlay = new ClientView();                        
+                        Login_view.lobby.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.question = Payload[1];
+                            GamePlay.answer = Payload[2];                            
+                            GamePlay.Show();
+                        }
+                        );
+                    }
+                    break;
+                case "INGAME": //need to fix bugs 
+                    {
+                        Player.turn = int.Parse(Payload[2]);
+                        Player.score = int.Parse(Payload[3]);                                               
+                        otherPlayers = new List<OtherPlayers>();
+                        Login_view.lobby.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Text = Payload[1];
+                        }
+                        );
+                        
                     }
                     break;
                 default:

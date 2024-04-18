@@ -19,7 +19,7 @@ namespace Client
         public Lobby()
         {
             InitializeComponent();
-            //CheckForIllegalCrossThreadCalls = false;
+            CheckForIllegalCrossThreadCalls = false;
             lobby = this;
             btStart.Visible = false;
         }
@@ -35,14 +35,13 @@ namespace Client
                 return;
             }
 
-            rtbNotify.Text += msg + '\n';
+            rtbNotify.Text += msg + '\n';            
 
         }
 
         public void DisplayConnectedPlayer(string name)
         {
-            connectedPlayer++;
-
+            connectedPlayer++;            
             switch (connectedPlayer)
             {
                 case 1:

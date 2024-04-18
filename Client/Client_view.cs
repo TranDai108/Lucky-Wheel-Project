@@ -15,15 +15,16 @@ namespace Client
     public partial class ClientView : Form
     {
         public Player player;
-        public string question = "";
-        public string answer = "";
+        public string question { get; set; }
+        public string answer { get; set; }        
         private int score = 0;
         private string wheel_res; // Wheel result
-        public ClientView(string name)
+        public ClientView()
         {
             InitializeComponent();
-            randomQuestion();
-            player = new Player(name, 1, score);
+            
+            //randomQuestion();
+            //player = new Player(name, 1, score);
         }
 
         public void randomQuestion()
@@ -47,7 +48,7 @@ namespace Client
 
             question = (string)randomQuestionObject["question"];
             answer = (string)randomQuestionObject["answer"];
-            lbQuestion.Text = question;
+            
         }
 
         public void ScoreHandle(string scoreEvent)
@@ -81,6 +82,7 @@ namespace Client
                     break;
             }
         }
+
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -210,12 +212,14 @@ namespace Client
             else
                 return false;
         }   
-        private void ClientView_Load(object sender, EventArgs e)
-        {
-            
 
+        private void ClientView_Load(object sender, EventArgs e)
+        {            
             int i = 0;
+            lbQuestion.Text = question;
             int ans_length = answer.Length + 1;
+
+            //Hien thi so luong o chu tuong ung voi dap an
             foreach(Control control in Controls)
             {
                 if(control is TextBox && control.Tag != null)
@@ -223,11 +227,9 @@ namespace Client
                     if (control.Tag.ToString() == "Ans")
                     {
                         ans_length--;
-
                     }
                     if (ans_length <= 0 && control.Tag.ToString() == "Ans")
                     {
-
                         control.Visible = false;
                     }
                     else

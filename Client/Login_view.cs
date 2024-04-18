@@ -23,7 +23,7 @@ namespace Client
 
         private void lbStart_Click(object sender, EventArgs e)
         {
-            ClientView client = new ClientView(tbName.Text);
+            ClientView client = new ClientView();
             client.ShowDialog();
         }
 
