@@ -124,10 +124,19 @@ namespace Client
                         if (Payload[1] == Player.name)
                         {
                             GamePlay.Invoke((MethodInvoker)delegate ()
-                            {
+                            {                                
                                 GamePlay.Allow_Playing();
+                                GamePlay.Turn_Notify(Payload[1]);
                             }
-                        );
+                            );
+                        }
+                        else
+                        {
+                            GamePlay.Invoke((MethodInvoker)delegate ()
+                            {
+                                GamePlay.Turn_Notify(Payload[1]);
+                            }
+                            );
                         }
 
                         /*gametable.UndoHighlightTurn();

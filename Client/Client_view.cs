@@ -115,7 +115,18 @@ namespace Client
                     break;
             }
         }
-
+        public void Turn_Notify(string Name)
+        {
+            Thread.Sleep(3000);
+            if(Player.name == Name)
+            {
+                lbComment.Text = "Tới lượt của bạn \r\n";
+                Thread.Sleep(1000);
+                lbComment.Text += "Vui lòng xoay vòng quay trước khi trả lời";
+            }
+            else
+                lbComment.Text = "Tới lượt của " + Name;
+        }
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -141,8 +152,7 @@ namespace Client
                 btWheel.Enabled = false;
             else
                 btWheel.Enabled = true;
-        }
-
+        }       
         //check  dap an va comment 
         private bool comment(string t)
         {
@@ -157,6 +167,7 @@ namespace Client
             {
                 // Neu nguoi choi chon dung, duoc chon tiep 
                 lbComment.Text = "Có " + count_char + " ký tự " + t + " trong đáp án, bạn được quyền trả lời tiếp ";
+                
                 tbScore.Text = score.ToString();
                 Player.score = int.Parse(tbScore.Text);
                 
@@ -172,7 +183,7 @@ namespace Client
             {
                 // Neu nguoi choi chon sai, mat luot, chuyen sang luot choi cua nguoi choi tiep theo 
                 score = Player.score;
-                lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";
+                lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";                
                 Client_Socket.datatype = "CHOOSE_WRONG";
                 Client_Socket.character = t;
                 Thread.Sleep(100);
@@ -265,7 +276,7 @@ namespace Client
             int count_showed = 0;
             foreach (Control control in Controls)
             {
-                if (control is TextBox && control.Text != "" && control.Tag.ToString() == "Ans")
+                if (control is TextBox && control.Text != "" && control.Tag != null && control.Tag.ToString() == "Ans")
                 {                    
                     count_showed++;
                 }

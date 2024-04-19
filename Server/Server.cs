@@ -177,19 +177,16 @@ namespace Server
                 case "CHOOSE_WRONG":
                     {
                         // Bugs ngay lan quay thu 2 
+                        currentturn++;
+                        if (currentturn > 3)
+                            currentturn = 1;
                         foreach (var player in connectedPlayers)
                         {
-                            if (player.playerSocket != p.playerSocket)
-                            {
-                                byte[] buffer = Encoding.UTF8.GetBytes("CW;" + arrPayload[1]);
-                                player.playerSocket.Send(buffer);
-                                Thread.Sleep(100);
-                                currentturn++;
-                                if (currentturn > 3)
-                                    currentturn = 1;
-                                buffer = Encoding.UTF8.GetBytes("TURN;" + connectedPlayers[currentturn - 1].name);
-                                player.playerSocket.Send(buffer);
-                            }
+                            byte[] buffer = Encoding.UTF8.GetBytes("CW;" + arrPayload[1]);
+                            player.playerSocket.Send(buffer);
+                            Thread.Sleep(100);
+                            buffer = Encoding.UTF8.GetBytes("TURN;" + connectedPlayers[currentturn - 1].name);
+                            player.playerSocket.Send(buffer);
                         }
                     }
                     break;

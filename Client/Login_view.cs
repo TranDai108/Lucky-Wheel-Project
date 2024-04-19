@@ -26,15 +26,7 @@ namespace Client
             ClientView client = new ClientView();
             client.ShowDialog();
         }
-
-        private void Login_view_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            /*ClientSocket.datatype = "DISCONNECT";
-            ClientSocket.SendMessage(Player.name);
-            ClientSocket.clientSocket.Shutdown(System.Net.Sockets.SocketShutdown.Both);
-            ClientSocket.clientSocket.Close();
-            this.Show();*/
-        }
+        
 
         private void btCreate_Click(object sender, EventArgs e)
         {

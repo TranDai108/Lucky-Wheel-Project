@@ -160,19 +160,24 @@ namespace Client
             this.tbRound.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbRound.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbRound.Location = new System.Drawing.Point(1052, 45);
             this.tbRound.Multiline = true;
             this.tbRound.Name = "tbRound";
             this.tbRound.Size = new System.Drawing.Size(109, 36);
             this.tbRound.TabIndex = 3;
+            this.tbRound.Text = "1";
+            this.tbRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbComment
             // 
             this.lbComment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbComment.BackColor = System.Drawing.Color.Gainsboro;
-            this.lbComment.Location = new System.Drawing.Point(66, 378);
+            this.lbComment.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbComment.ForeColor = System.Drawing.Color.Brown;
+            this.lbComment.Location = new System.Drawing.Point(26, 380);
             this.lbComment.Name = "lbComment";
-            this.lbComment.Size = new System.Drawing.Size(345, 70);
+            this.lbComment.Size = new System.Drawing.Size(275, 77);
             this.lbComment.TabIndex = 4;
             this.lbComment.Text = "Bạn phải quay vòng quay trước khi chọn đáp án";
             this.lbComment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

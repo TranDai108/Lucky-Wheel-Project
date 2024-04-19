@@ -127,7 +127,6 @@ namespace Client
             this.Controls.Add(this.label1);
             this.Name = "Login_view";
             this.Text = "Login_view";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_view_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
