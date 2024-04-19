@@ -16,7 +16,7 @@ namespace Client
         public static Socket clientSocket;
         public static Thread recvThread;
         public static string datatype = ""; // Kieu du lieu nguoi choi gui cho server
-
+        public static string character { get; set; }
         public static void Connect(IPEndPoint serverEP)
         {
             clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -28,6 +28,9 @@ namespace Client
         public static void SendMessage(string data)
         {
             string msgstr = datatype + ";" + data;
+            //Xu ly message chon dap an 
+            if (msgstr.Contains("CHOOSE"))
+                msgstr = datatype + ";" + character;
             byte[] msg = Encoding.UTF8.GetBytes(msgstr);
             clientSocket.Send(msg);
         }
@@ -37,6 +40,7 @@ namespace Client
 
             while (clientSocket.Connected)
             {
+                
                 if (clientSocket.Available > 0)
                 {
                     string msg = "";
@@ -49,6 +53,8 @@ namespace Client
 
                     AnalyzingReturnMessage(msg);
                     Login_view.lobby.Tempdisplay(msg);
+                    
+
                 }
             }
             //Terminate this receiving thread when clientSocket is disconnected
@@ -58,13 +64,17 @@ namespace Client
         public static List<OtherPlayers> otherPlayers;
         public static void AnalyzingReturnMessage(string msg)
         {
-            string[] Payload = msg.Split(';');
-
+            string[] Payload = msg.Split(';');            
             switch(Payload[0])
             {
                 case "LOBBYINFO":
                     {
                         Login_view.lobby.DisplayConnectedPlayer(Payload[1]);
+                        //Kiem tra dieu kien khi da du nguoi moi duoc an nut start tro choi
+                        if (Login_view.lobby.connectedPlayer == 3)
+                            Login_view.lobby.Disable_Enable_Start(true);
+                        else
+                            Login_view.lobby.Disable_Enable_Start(false);
                     }
                     break;
                 case "LOAD_QA":
@@ -88,10 +98,70 @@ namespace Client
                         {
                             GamePlay.Text = Payload[1];
                         }
-                        );
-                        
+                        );                        
                     }
                     break;
+                case "OTHERINFO":
+                    {
+                        OtherPlayers otherplayer = new OtherPlayers();
+                        otherplayer.name = Payload[1];
+                        otherplayer.turn = Payload[2];
+                        otherplayer.score = Payload[3];
+                        otherPlayers.Add(otherplayer);
+                    }
+                    break;
+                case "SETUP":
+                    {
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.InGameDisplay();
+                        }
+                        );
+                    }
+                    break;
+                case "TURN":
+                    {                        
+                        if (Payload[1] == Player.name)
+                        {
+                            GamePlay.Invoke((MethodInvoker)delegate ()
+                            {
+                                GamePlay.Allow_Playing();
+                            }
+                        );
+                        }
+
+                        /*gametable.UndoHighlightTurn();
+                        gametable.HighlightTurn(arrPayload[1]);*/
+                    }
+                    break;
+                case "CR": //ANOTHER PLAYER CHOOSE RIGHT ANS
+                    {
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Game_Update(Payload[1]);
+                        }
+                        );
+                    }
+                    break;
+                case "CW": //ANOTHER PLAYER CHOOSE WRONG ANS
+                    {                        
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Game_Update(Payload[1]);
+                        }
+                       );
+                    }
+                    break;
+                case "SCORE_UPDATE": //UPDATE ANOTHER PLAYER'S SCORE
+                    {
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Score_Update(Payload[1],Payload[2]);
+                        }
+                       );
+                    }
+                    break;
+
                 default:
                     break;
             }

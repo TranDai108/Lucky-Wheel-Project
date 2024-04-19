@@ -43,7 +43,7 @@ namespace Client
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(619, 149);
+            this.label1.Location = new System.Drawing.Point(618, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 20);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace Client
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(620, 181);
+            this.tbName.Location = new System.Drawing.Point(619, 153);
             this.tbName.Multiline = true;
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(171, 35);
@@ -61,20 +61,20 @@ namespace Client
             // 
             this.lbStart.AutoSize = true;
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
-            this.lbStart.Font = new System.Drawing.Font("Playfair Display", 22F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStart.Font = new System.Drawing.Font("Playfair Display", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStart.Location = new System.Drawing.Point(309, 445);
+            this.lbStart.Location = new System.Drawing.Point(227, 446);
             this.lbStart.Name = "lbStart";
-            this.lbStart.Size = new System.Drawing.Size(208, 62);
+            this.lbStart.Size = new System.Drawing.Size(403, 51);
             this.lbStart.TabIndex = 2;
-            this.lbStart.Text = "BẮT ĐẦU";
+            this.lbStart.Text = "VÒNG QUAY MAY MẮN";
             this.lbStart.Click += new System.EventHandler(this.lbStart_Click);
             // 
             // btCreate
             // 
-            this.btCreate.Location = new System.Drawing.Point(620, 351);
+            this.btCreate.Location = new System.Drawing.Point(621, 288);
             this.btCreate.Name = "btCreate";
-            this.btCreate.Size = new System.Drawing.Size(171, 61);
+            this.btCreate.Size = new System.Drawing.Size(169, 61);
             this.btCreate.TabIndex = 3;
             this.btCreate.Text = "Tạo Phòng";
             this.btCreate.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@ namespace Client
             // 
             // btJoin
             // 
-            this.btJoin.Location = new System.Drawing.Point(621, 445);
+            this.btJoin.Location = new System.Drawing.Point(620, 355);
             this.btJoin.Name = "btJoin";
             this.btJoin.Size = new System.Drawing.Size(170, 58);
             this.btJoin.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Client
             // textBoxIP
             // 
             this.textBoxIP.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIP.Location = new System.Drawing.Point(620, 259);
+            this.textBoxIP.Location = new System.Drawing.Point(619, 231);
             this.textBoxIP.Multiline = true;
             this.textBoxIP.Name = "textBoxIP";
             this.textBoxIP.Size = new System.Drawing.Size(171, 40);
@@ -105,7 +105,7 @@ namespace Client
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(618, 234);
+            this.label2.Location = new System.Drawing.Point(617, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 6;

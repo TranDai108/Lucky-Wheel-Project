@@ -38,7 +38,13 @@ namespace Client
             rtbNotify.Text += msg + '\n';            
 
         }
-
+        public void Disable_Enable_Start(bool check)
+        {
+            if (check == true)
+                btStart.Enabled = true;
+            else
+                btStart.Enabled = false;
+        }
         public void DisplayConnectedPlayer(string name)
         {
             connectedPlayer++;            
@@ -62,7 +68,7 @@ namespace Client
             Client_Socket.datatype = "START";
             Client_Socket.SendMessage("");
         }
-
+        
         private void btLeave_Click(object sender, EventArgs e)
         {
             this.Close();

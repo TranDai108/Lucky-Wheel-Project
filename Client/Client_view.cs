@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using System.Threading;
+
 namespace Client
 {
     
@@ -16,41 +18,72 @@ namespace Client
     {
         public Player player;
         public string question { get; set; }
-        public string answer { get; set; }        
+        public string answer { get; set; }
+
+        public List<Label> lbNames;
+        public List<TextBox> tbScores;
         private int score = 0;
         private string wheel_res; // Wheel result
         public ClientView()
         {
-            InitializeComponent();
-            
-            //randomQuestion();
-            //player = new Player(name, 1, score);
+            InitializeComponent();            
         }
-
-        public void randomQuestion()
+        
+        public void InGameDisplay()
         {
-            // Lấy filepath hiện tại và gán file questions.json vào 
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions.json");            
+            //Need to recheck otherplayers 
+            Client_Socket.otherPlayers.Sort((x, y) => x.turn.CompareTo(y.turn));
+            if (Player.turn == 1)
+            {
+                lbName.Text = Player.name;
+                tbScore.Text = Player.score.ToString();
+                tbScore.Tag = Player.name;
 
-            // Đọc nội dung từ tệp JSON
-            string jsonText = File.ReadAllText(jsonFilePath);
+                lbName2.Text = Client_Socket.otherPlayers[0].name;
+                tbScore2.Text = Client_Socket.otherPlayers[0].score;
+                tbScore2.Tag = lbName2.Text;
 
-            // Phân tích nội dung JSON
-            JObject json = JObject.Parse(jsonText);
+                lbName3.Text = Client_Socket.otherPlayers[1].name;
+                tbScore3.Text = Client_Socket.otherPlayers[1].score;
+                tbScore3.Tag = lbName3.Text;
+            }
+            else if(Player.turn == 2)
+            {
+                lbName.Text = Player.name;
+                tbScore.Text = Player.score.ToString();
+                tbScore.Tag = Player.name;
 
-            // Lấy ra mảng các câu hỏi từ đối tượng JSON
-            JArray questionsArray = (JArray)json["questions"];
+                lbName2.Text = Client_Socket.otherPlayers[0].name;
+                tbScore2.Text = Client_Socket.otherPlayers[0].score;
+                tbScore2.Tag = lbName2.Text;
 
-            // Chọn ngẫu nhiên một câu hỏi từ mảng
-            Random random = new Random();
-            int randomIndex = random.Next(0, questionsArray.Count);
-            JObject randomQuestionObject = (JObject)questionsArray[randomIndex];
+                lbName3.Text = Client_Socket.otherPlayers[1].name;
+                tbScore3.Text = Client_Socket.otherPlayers[1].score;
+                tbScore3.Tag = lbName3.Text;
+            }
+            else if (Player.turn == 3)
+            {
+                lbName.Text = Player.name;
+                tbScore.Text = Player.score.ToString();
+                tbScore.Tag = Player.name;
 
-            question = (string)randomQuestionObject["question"];
-            answer = (string)randomQuestionObject["answer"];
-            
+                lbName2.Text = Client_Socket.otherPlayers[0].name;
+                tbScore2.Text = Client_Socket.otherPlayers[0].score;
+                tbScore2.Tag = lbName2.Text;
+
+                lbName3.Text = Client_Socket.otherPlayers[1].name;
+                tbScore3.Text = Client_Socket.otherPlayers[1].score;
+                tbScore3.Tag = lbName3.Text;
+            }                        
+            /*lbNames.Add(lbName2);
+            tbScores.Add(tbScore2);*/            
         }
 
+        public void Allow_Playing()
+        {
+            allowState_button(true);
+        }
+        //Xu ly Score sau khi quay vong quay
         public void ScoreHandle(string scoreEvent)
         {
             switch(scoreEvent)
@@ -113,6 +146,7 @@ namespace Client
         //check  dap an va comment 
         private bool comment(string t)
         {
+            
             int count_char = 0;
             for(int i = 0; i < answer.Length; i++)
             {
@@ -121,23 +155,52 @@ namespace Client
             }
             if (count_char > 0)
             {
-                //Neu nguoi choi chon dung, duoc chon tiep 
+                // Neu nguoi choi chon dung, duoc chon tiep 
                 lbComment.Text = "Có " + count_char + " ký tự " + t + " trong đáp án, bạn được quyền trả lời tiếp ";
                 tbScore.Text = score.ToString();
+                Player.score = int.Parse(tbScore.Text);
+                
+                Client_Socket.datatype = "CHOOSE_RIGHT";
+                Client_Socket.character = t;
+                Thread.Sleep(100);
+                Client_Socket.SendMessage("");
+
                 changeState_wheel(false);
                 return true;
-            }
-                
+            }                
             else
             {
                 // Neu nguoi choi chon sai, mat luot, chuyen sang luot choi cua nguoi choi tiep theo 
+                score = Player.score;
                 lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";
+                Client_Socket.datatype = "CHOOSE_WRONG";
+                Client_Socket.character = t;
+                Thread.Sleep(100);
+                Client_Socket.SendMessage("");
+
                 changeState_wheel(true);
                 return false;
             }
          
         }
-
+        public void Game_Update(string Character) //UPDATE UI
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is Button && control.Tag != null && control.Tag.ToString() == "Character" )
+                    if (control.Text == Character)
+                        control.Visible = false;
+            }
+            show_ans(Character);
+        }
+        public void Score_Update(string Name, string Score)
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox && control.Tag != null && control.Tag.ToString() == Name)
+                    control.Text = Score;
+            }
+        }
         //Su kien khi an vao 1 phim chu cai
         private void btwWord_MouseClick(object sender, MouseEventArgs e)
         {
@@ -154,17 +217,22 @@ namespace Client
         {
             foreach (Control control in Controls)
             {
-                if (control is TextBox && control.Tag != null)
+                if (control is TextBox && control.Tag != null && control.Tag.ToString() == "Ans")
                 {
-                    if (control.Tag.ToString() == "Ans")    
-                    {
-                        if (control.AccessibleName == t)
-                            control.Text = t;
-                    }    
+                    if (control.AccessibleName == t)
+                        control.Text = t;
                 }
             }
         }
 
+        private void tbScore_TextChanged(object sender, EventArgs e)
+        {
+            Client_Socket.datatype = "SCORE_CHANGED";
+            string data = Player.name + ";" + tbScore.Text;            
+            Client_Socket.SendMessage(data);
+            
+        }
+        
         //Chuyen trang thai button (enable / disable)
         private void allowState_button(bool check)
         {
@@ -197,12 +265,12 @@ namespace Client
             int count_showed = 0;
             foreach (Control control in Controls)
             {
-                if (control is TextBox && control.Text != "")
+                if (control is TextBox && control.Text != "" && control.Tag.ToString() == "Ans")
                 {                    
                     count_showed++;
                 }
             }
-            if (count_showed == answer.Length+1)
+            if (count_showed == answer.Length)
             {
                 MessageBox.Show("Bạn đã chiến thắng vòng chơi này !", "Thông báo", MessageBoxButtons.OK);
                 this.Refresh();
@@ -241,8 +309,8 @@ namespace Client
                 }
                 
             }
-            allowState_button(true);
-        }       
+            allowState_button(false);
+        }
 
         
     }

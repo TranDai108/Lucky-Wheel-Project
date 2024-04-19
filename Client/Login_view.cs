@@ -38,6 +38,12 @@ namespace Client
 
         private void btCreate_Click(object sender, EventArgs e)
         {
+            if(tbName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên người chơi trước khi thamg gia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+                
             lobby = new Lobby();
             IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), 11000);
             Client_Socket.datatype = "CONNECT";
@@ -49,6 +55,7 @@ namespace Client
             this.Hide();
             lobby.Show();
         }
+
         void lobby_FormClosed(object sender, EventArgs e)
         {
             Client_Socket.datatype = "DISCONNECT";
@@ -60,6 +67,12 @@ namespace Client
 
         private void btJoin_Click(object sender, EventArgs e)
         {
+            if (tbName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên người chơi trước khi thamg gia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse(textBoxIP.Text), 11000);
             Client_Socket.datatype = "CONNECT";
             Client_Socket.Connect(serverEP);

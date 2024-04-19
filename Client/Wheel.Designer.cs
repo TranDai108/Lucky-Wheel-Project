@@ -39,7 +39,7 @@ namespace Client
             // 
             // btSpin
             // 
-            this.btSpin.BackColor = System.Drawing.Color.Aquamarine;
+            this.btSpin.BackColor = System.Drawing.Color.PaleGreen;
             this.btSpin.Location = new System.Drawing.Point(300, 416);
             this.btSpin.Name = "btSpin";
             this.btSpin.Size = new System.Drawing.Size(140, 58);
@@ -51,6 +51,7 @@ namespace Client
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Snow;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(567, 227);
             this.label1.Name = "label1";
@@ -83,14 +84,15 @@ namespace Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(771, 553);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(742, 547);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btSpin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "Wheel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Wheel";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
