@@ -117,11 +117,10 @@ namespace Client
         }
         public void Turn_Notify(string Name)
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(1500);
             if(Player.name == Name)
             {
-                lbComment.Text = "Tới lượt của bạn \r\n";
-                Thread.Sleep(1000);
+                lbComment.Text = "Tới lượt của bạn \r\n";                
                 lbComment.Text += "Vui lòng xoay vòng quay trước khi trả lời";
             }
             else

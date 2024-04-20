@@ -26,6 +26,7 @@ namespace Server
         private static int currentturn = 1;
         private static string question;
         private static string answer;
+        private static string questionPath;
         public Server()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace Server
             IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000);
             serverSocket.Bind(serverEP);
             serverSocket.Listen(3);
-            rtbServer.Text = "Waiting for connection from players ... \r\n";         
+            rtbServer.Text += "Waiting for connection from players ... \r\n";         
         }
         
         public void recvfromClientsocket(Socket client)
@@ -212,11 +213,11 @@ namespace Server
         public static void randomQuestion()
         {
             // Lấy filepath hiện tại và gán file questions.json vào 
-            string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions18.json");
+            //string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions18.json");
 
             // Đọc nội dung từ tệp JSON
-            string jsonText = File.ReadAllText(jsonFilePath);
-
+            string jsonText = File.ReadAllText(questionPath);
+            
             // Phân tích nội dung JSON
             JObject json = JObject.Parse(jsonText);
 
@@ -266,6 +267,20 @@ namespace Server
                 }
             });
             serverlisten.Start();
+        }
+
+        private void btFetchQuestion_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Đường dẫn của file được chọn
+                questionPath = openFileDialog.FileName;                
+                
+            }
         }
     }
 }
