@@ -11,6 +11,7 @@ namespace Client
         public static string name { get; set; }
         public static int turn { get; set; }
         public static int score { get; set; }
+        public static int totalScore { get; set; }
         public Player() { }
         public Player(string Name, int Turn, int Score)
         {

@@ -24,6 +24,7 @@ namespace Server
         private static List<Player> connectedPlayers = new List<Player>();
 
         private static int currentturn = 1;
+        private static int currentround = 1;
         private static string question;
         private static string answer;
         private static string questionPath;
@@ -195,11 +196,95 @@ namespace Server
                     {
                         foreach (var player in connectedPlayers)
                         {
-                            if (player.playerSocket != p.playerSocket)
+                            byte[] buffer = Encoding.UTF8.GetBytes("SCORE_UPDATE;" + arrPayload[1] + ";" + arrPayload[2]);
+                            player.playerSocket.Send(buffer);
+                        }
+                    }
+                    break;
+                case "TOTAL_SCORE":
+                    {
+                        foreach (var player in connectedPlayers)
+                        {
+                            if (player.name == arrPayload[1])
+                                player.totalscore = int.Parse(arrPayload[2]);
+                        }
+                    }
+                    break;
+                case "WIN_ROUND":
+                    {
+                        currentround++;
+                        if(currentround > 3)
+                        {                                                        
+                            connectedPlayers.Sort((x, y) => x.totalscore.CompareTo(y.totalscore));
+                            string WinnerName = connectedPlayers[connectedPlayers.Count - 1].name;
+                            foreach (var player in connectedPlayers)
                             {
-                                byte[] buffer = Encoding.UTF8.GetBytes("SCORE_UPDATE;" + arrPayload[1] + ";" + arrPayload[2]);
-                                player.playerSocket.Send(buffer);                                
+                                string makemsg = "ENDGAME;" + WinnerName;
+                                byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                                player.playerSocket.Send(buffer);
                             }
+                            break;
+                        }
+                        foreach (var player in connectedPlayers)
+                        {
+                            if (player.name == arrPayload[1])
+                                player.totalscore = int.Parse(arrPayload[2]);
+                        }
+                        randomQuestion();
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg = "NEW_ROUND;" + currentround.ToString();
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Thread.Sleep(100);
+                        }
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg = "LOAD_QA;" + question + ";" + answer;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Thread.Sleep(100);
+                        }
+                        SetUpPlayerTurn();
+                        connectedPlayers.Sort((x, y) => x.turn.CompareTo(y.turn));
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg = "INGAME;" + player.name + ";" + player.turn + ";" + player.score;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Thread.Sleep(100);
+                        }
+                        foreach (var player in connectedPlayers)
+                        {
+                            foreach (var player_ in connectedPlayers)
+                            {
+                                if (player.name != player_.name)
+                                {
+                                    string makemsg = "OTHERINFO;" + player_.name + ";" + player_.turn + ";" + player.score;
+                                    byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                                    player.playerSocket.Send(buffer);
+                                    Console.WriteLine("Sendback: " + makemsg);
+                                    Thread.Sleep(100);
+                                }
+                            }
+                        }
+
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg = "SETUP;" + player.name;
+                            byte[] buffer = Encoding.UTF8.GetBytes(makemsg);
+                            player.playerSocket.Send(buffer);
+                            Console.WriteLine("Sendback: " + makemsg);
+                            Thread.Sleep(100);
+                        }
+
+                        foreach (var player in connectedPlayers)
+                        {
+                            string makemsg_ = "TURN;" + connectedPlayers[currentturn - 1].name;
+                            byte[] buffer_ = Encoding.UTF8.GetBytes(makemsg_);
+                            player.playerSocket.Send(buffer_);
+                            Console.WriteLine("Sendback: " + makemsg_);
+                            Thread.Sleep(100);
                         }
                     }
                     break;

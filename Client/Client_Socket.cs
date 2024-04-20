@@ -17,6 +17,7 @@ namespace Client
         public static Thread recvThread;
         public static string datatype = ""; // Kieu du lieu nguoi choi gui cho server
         public static string character { get; set; }
+        public static int Playerround = 1;
         public static void Connect(IPEndPoint serverEP)
         {
             clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -61,6 +62,7 @@ namespace Client
             //recvThread.Abort();
         }
         public static ClientView GamePlay;
+        public static Winner WinnerForm;
         public static List<OtherPlayers> otherPlayers;
         public static void AnalyzingReturnMessage(string msg)
         {
@@ -83,7 +85,8 @@ namespace Client
                         Login_view.lobby.Invoke((MethodInvoker)delegate ()
                         {
                             GamePlay.question = Payload[1];
-                            GamePlay.answer = Payload[2];                            
+                            GamePlay.answer = Payload[2];
+                            GamePlay.round = Playerround.ToString();
                             GamePlay.Show();
                         }
                         );
@@ -97,6 +100,7 @@ namespace Client
                         Login_view.lobby.Invoke((MethodInvoker)delegate ()
                         {
                             GamePlay.Text = Payload[1];
+                            Login_view.lobby.Hide();
                         }
                         );                        
                     }
@@ -139,8 +143,6 @@ namespace Client
                             );
                         }
 
-                        /*gametable.UndoHighlightTurn();
-                        gametable.HighlightTurn(arrPayload[1]);*/
                     }
                     break;
                 case "CR": //ANOTHER PLAYER CHOOSE RIGHT ANS
@@ -162,7 +164,7 @@ namespace Client
                     }
                     break;
                 case "SCORE_UPDATE": //UPDATE ANOTHER PLAYER'S SCORE
-                    {
+                    {                        
                         GamePlay.Invoke((MethodInvoker)delegate ()
                         {
                             GamePlay.Score_Update(Payload[1],Payload[2]);
@@ -170,7 +172,32 @@ namespace Client
                        );
                     }
                     break;
-
+                case "NEW_ROUND":
+                    {
+                        Playerround = int.Parse(Payload[1]);
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Close();                                                            
+                        }
+                        );
+                    }
+                    break;
+                case "ENDGAME":
+                    {                        
+                        GamePlay.Invoke((MethodInvoker)delegate ()
+                        {
+                            GamePlay.Close();
+                        }
+                        );
+                        WinnerForm = new Winner();
+                        Login_view.lobby.Invoke((MethodInvoker)delegate ()
+                        {
+                            WinnerForm.Show();
+                            WinnerForm.UpdateWinner(Payload[1]);
+                        }
+                        );
+                    }
+                    break;
                 default:
                     break;
             }

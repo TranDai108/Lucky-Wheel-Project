@@ -19,10 +19,11 @@ namespace Client
         public Player player;
         public string question { get; set; }
         public string answer { get; set; }
-
+        public string round { get; set; }
         public List<Label> lbNames;
         public List<TextBox> tbScores;
         private int score = 0;
+        
         private string wheel_res; // Wheel result
         public ClientView()
         {
@@ -202,6 +203,21 @@ namespace Client
                         control.Visible = false;
             }
             show_ans(Character);
+
+            int count_showed = 0;
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox && control.Text != "" && control.Tag != null && control.Tag.ToString() == "Ans")
+                {
+                    count_showed++;
+                }
+            }
+            if (count_showed == answer.Length)
+            {
+                Player.totalScore += int.Parse(tbScore.Text);
+                Client_Socket.datatype = "TOTAL_SCORE";
+                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                
+            }
         }
         public void Score_Update(string Name, string Score)
         {
@@ -282,8 +298,11 @@ namespace Client
             }
             if (count_showed == answer.Length)
             {
+                Player.totalScore += int.Parse(tbScore.Text);
                 MessageBox.Show("Bạn đã chiến thắng vòng chơi này !", "Thông báo", MessageBoxButtons.OK);
-                this.Refresh();
+                Thread.Sleep(1500);
+                Client_Socket.datatype = "WIN_ROUND";
+                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                                
                 return true;
                 
             }
@@ -295,6 +314,7 @@ namespace Client
         {            
             int i = 0;
             lbQuestion.Text = question;
+            tbRound.Text = round;
             int ans_length = answer.Length + 1;
 
             //Hien thi so luong o chu tuong ung voi dap an
