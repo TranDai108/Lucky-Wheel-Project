@@ -177,8 +177,7 @@ namespace Server
                     }
                     break;
                 case "CHOOSE_WRONG":
-                    {
-                        // Bugs ngay lan quay thu 2 
+                    {                     
                         currentturn++;
                         if (currentturn > 3)
                             currentturn = 1;
@@ -294,12 +293,9 @@ namespace Server
             }
         }
 
-
+        // Other methods
         public static void randomQuestion()
-        {
-            // Lấy filepath hiện tại và gán file questions.json vào 
-            //string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "questions18.json");
-
+        {            
             // Đọc nội dung từ tệp JSON
             string jsonText = File.ReadAllText(questionPath);
             
@@ -372,7 +368,8 @@ namespace Server
         {
             serverSocket.Close();
             serverlisten.Abort();
-            clientThread.Abort();
+            if(clientThread != null)
+                clientThread.Abort();
         }
     }
 }

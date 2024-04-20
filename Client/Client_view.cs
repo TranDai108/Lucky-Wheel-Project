@@ -29,7 +29,7 @@ namespace Client
         {
             InitializeComponent();            
         }
-        
+        //Ham public 
         public void InGameDisplay()
         {
             //Need to recheck otherplayers 
@@ -79,7 +79,6 @@ namespace Client
             /*lbNames.Add(lbName2);
             tbScores.Add(tbScore2);*/            
         }
-
         public void Allow_Playing()
         {
             allowState_button(true);
@@ -127,6 +126,40 @@ namespace Client
             else
                 lbComment.Text = "Tới lượt của " + Name;
         }
+        public void Game_Update(string Character) //UPDATE UI
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is Button && control.Tag != null && control.Tag.ToString() == "Character")
+                    if (control.Text == Character)
+                        control.Visible = false;
+            }
+            show_ans(Character);
+
+            int count_showed = 0;
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox && control.Text != "" && control.Tag != null && control.Tag.ToString() == "Ans")
+                {
+                    count_showed++;
+                }
+            }
+            if (count_showed == answer.Length)
+            {
+                Player.totalScore += int.Parse(tbScore.Text);
+                Client_Socket.datatype = "TOTAL_SCORE";
+                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());
+            }
+        }
+        public void Score_Update(string Name, string Score)
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox && control.Tag != null && control.Tag.ToString() == Name)
+                    control.Text = Score;
+            }
+        }
+        
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -194,39 +227,7 @@ namespace Client
             }
          
         }
-        public void Game_Update(string Character) //UPDATE UI
-        {
-            foreach (Control control in Controls)
-            {
-                if (control is Button && control.Tag != null && control.Tag.ToString() == "Character" )
-                    if (control.Text == Character)
-                        control.Visible = false;
-            }
-            show_ans(Character);
-
-            int count_showed = 0;
-            foreach (Control control in Controls)
-            {
-                if (control is TextBox && control.Text != "" && control.Tag != null && control.Tag.ToString() == "Ans")
-                {
-                    count_showed++;
-                }
-            }
-            if (count_showed == answer.Length)
-            {
-                Player.totalScore += int.Parse(tbScore.Text);
-                Client_Socket.datatype = "TOTAL_SCORE";
-                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                
-            }
-        }
-        public void Score_Update(string Name, string Score)
-        {
-            foreach (Control control in Controls)
-            {
-                if (control is TextBox && control.Tag != null && control.Tag.ToString() == Name)
-                    control.Text = Score;
-            }
-        }
+        
         //Su kien khi an vao 1 phim chu cai
         private void btwWord_MouseClick(object sender, MouseEventArgs e)
         {
@@ -286,7 +287,7 @@ namespace Client
         }
 
         //Kiem tra dieu kien da chien thang hay chua (neu o chu da hoan thien thi chien thang)
-        private bool check_win()
+        private void check_win()
         {
             int count_showed = 0;
             foreach (Control control in Controls)
@@ -302,12 +303,8 @@ namespace Client
                 MessageBox.Show("Bạn đã chiến thắng vòng chơi này !", "Thông báo", MessageBoxButtons.OK);
                 Thread.Sleep(1500);
                 Client_Socket.datatype = "WIN_ROUND";
-                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                                
-                return true;
-                
-            }
-            else
-                return false;
+                Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                                                                
+            }            
         }   
 
         private void ClientView_Load(object sender, EventArgs e)
