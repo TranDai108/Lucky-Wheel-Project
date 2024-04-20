@@ -282,6 +282,13 @@ namespace Server
                 
             }
         }
+
+        private void Server_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serverSocket.Close();
+            serverlisten.Abort();
+            clientThread.Abort();
+        }
     }
 }
 

@@ -75,6 +75,7 @@ namespace Server
             this.Controls.Add(this.rtbServer);
             this.Name = "Server";
             this.Text = "Server Notification";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Server_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
