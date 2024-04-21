@@ -320,11 +320,13 @@ namespace Server
             JObject randomQuestionObject = (JObject)questionsArray[randomIndex];
             
             question = (string)randomQuestionObject["question"];
+            // Kiểm tra câu hỏi đã được sử dụng hay chưa 
             while (UsedQuestions.Contains(question))
             {
                 random = new Random();
                 randomIndex = random.Next(0, questionsArray.Count);
                 randomQuestionObject = (JObject)questionsArray[randomIndex];
+                question = (string)randomQuestionObject["question"];
             }
             UsedQuestions.Add(question);
             answer = (string)randomQuestionObject["answer"];

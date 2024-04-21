@@ -204,10 +204,9 @@ namespace Client
                 tbScore.Text = score.ToString();
                 Player.score = int.Parse(tbScore.Text);
                 
-                Client_Socket.datatype = "CHOOSE_RIGHT";
-                Client_Socket.character = t;
+                Client_Socket.datatype = "CHOOSE_RIGHT";                
                 Thread.Sleep(100);
-                Client_Socket.SendMessage("");
+                Client_Socket.SendMessage(t);
 
                 changeState_wheel(false);
                 return true;
@@ -217,10 +216,9 @@ namespace Client
                 // Neu nguoi choi chon sai, mat luot, chuyen sang luot choi cua nguoi choi tiep theo 
                 score = Player.score;
                 lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";                
-                Client_Socket.datatype = "CHOOSE_WRONG";
-                Client_Socket.character = t;
+                Client_Socket.datatype = "CHOOSE_WRONG";                
                 Thread.Sleep(100);
-                Client_Socket.SendMessage("");
+                Client_Socket.SendMessage(t);
 
                 changeState_wheel(true);
                 return false;

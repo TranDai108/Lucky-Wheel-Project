@@ -15,8 +15,7 @@ namespace Client
     {
         public static Socket clientSocket;
         public static Thread recvThread;
-        public static string datatype = ""; // Kieu du lieu nguoi choi gui cho server
-        public static string character { get; set; }
+        public static string datatype = ""; // Kieu du lieu nguoi choi gui cho server        
         public static int Playerround = 1;
         public static void Connect(IPEndPoint serverEP)
         {
@@ -28,10 +27,7 @@ namespace Client
 
         public static void SendMessage(string data)
         {
-            string msgstr = datatype + ";" + data;
-            //Xu ly message chon dap an 
-            if (msgstr.Contains("CHOOSE"))
-                msgstr = datatype + ";" + character;
+            string msgstr = datatype + ";" + data;           
             byte[] msg = Encoding.UTF8.GetBytes(msgstr);
             clientSocket.Send(msg);
         }
