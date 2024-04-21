@@ -22,6 +22,7 @@ namespace Server
         private static Thread clientThread;
         private static Thread serverlisten;
         private static List<Player> connectedPlayers = new List<Player>();
+        private static List<string> UsedQuestions = new List<string>();
 
         private static int currentturn = 1;
         private static int currentround = 1;
@@ -35,7 +36,7 @@ namespace Server
             IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000);
             serverSocket.Bind(serverEP);
             serverSocket.Listen(3);
-            rtbServer.Text += "Waiting for connection from players ... \r\n";         
+            rtbServer.Text += "Chờ đợi kết nối từ người chơi ... \r\n";         
         }
         
         public void recvfromClientsocket(Socket client)
@@ -111,7 +112,15 @@ namespace Server
                     break;
                 case "START":
                     {
-                        randomQuestion();
+                        try
+                        {
+                            randomQuestion();
+                        }
+                        catch(Exception)
+                        {
+                            MessageBox.Show("Vui lòng chọn file gói câu hỏi trước khi bắt đầu trò chơi !", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                         foreach (var player in connectedPlayers)
                         {                            
                             string makemsg = "LOAD_QA;" + question + ";" + answer ;
@@ -295,10 +304,10 @@ namespace Server
 
         // Other methods
         public static void randomQuestion()
-        {            
+        {
             // Đọc nội dung từ tệp JSON
             string jsonText = File.ReadAllText(questionPath);
-            
+
             // Phân tích nội dung JSON
             JObject json = JObject.Parse(jsonText);
 
@@ -307,11 +316,18 @@ namespace Server
 
             // Chọn ngẫu nhiên một câu hỏi từ mảng
             Random random = new Random();
-            int randomIndex = random.Next(0, questionsArray.Count);
+            int randomIndex = random.Next(0, questionsArray.Count);            
             JObject randomQuestionObject = (JObject)questionsArray[randomIndex];
-
+            
             question = (string)randomQuestionObject["question"];
-            answer = (string)randomQuestionObject["answer"];            
+            while (UsedQuestions.Contains(question))
+            {
+                random = new Random();
+                randomIndex = random.Next(0, questionsArray.Count);
+                randomQuestionObject = (JObject)questionsArray[randomIndex];
+            }
+            UsedQuestions.Add(question);
+            answer = (string)randomQuestionObject["answer"];
         }
 
         private static void SetUpPlayerTurn()

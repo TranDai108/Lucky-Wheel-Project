@@ -81,7 +81,7 @@ namespace Client
             this.labelQuestion.BackColor = System.Drawing.Color.Transparent;
             this.labelQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuestion.ForeColor = System.Drawing.Color.White;
-            this.labelQuestion.Location = new System.Drawing.Point(238, 101);
+            this.labelQuestion.Location = new System.Drawing.Point(232, 110);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(109, 24);
             this.labelQuestion.TabIndex = 2;
@@ -108,7 +108,7 @@ namespace Client
             this.lbName3.BackColor = System.Drawing.Color.Transparent;
             this.lbName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName3.ForeColor = System.Drawing.Color.White;
-            this.lbName3.Location = new System.Drawing.Point(1038, 224);
+            this.lbName3.Location = new System.Drawing.Point(1068, 219);
             this.lbName3.Name = "lbName3";
             this.lbName3.Size = new System.Drawing.Size(96, 29);
             this.lbName3.TabIndex = 2;
@@ -120,7 +120,7 @@ namespace Client
             this.tbScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbScore2.BackColor = System.Drawing.Color.White;
             this.tbScore2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbScore2.Location = new System.Drawing.Point(1043, 147);
+            this.tbScore2.Location = new System.Drawing.Point(1073, 142);
             this.tbScore2.Multiline = true;
             this.tbScore2.Name = "tbScore2";
             this.tbScore2.ReadOnly = true;
@@ -132,7 +132,7 @@ namespace Client
             // 
             this.tbScore3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbScore3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbScore3.Location = new System.Drawing.Point(1043, 256);
+            this.tbScore3.Location = new System.Drawing.Point(1073, 251);
             this.tbScore3.Multiline = true;
             this.tbScore3.Name = "tbScore3";
             this.tbScore3.ReadOnly = true;
@@ -149,7 +149,7 @@ namespace Client
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1049, 13);
+            this.label5.Location = new System.Drawing.Point(1079, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 2;
@@ -161,7 +161,7 @@ namespace Client
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbRound.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbRound.Location = new System.Drawing.Point(1043, 45);
+            this.tbRound.Location = new System.Drawing.Point(1073, 40);
             this.tbRound.Multiline = true;
             this.tbRound.Name = "tbRound";
             this.tbRound.Size = new System.Drawing.Size(91, 40);
@@ -319,7 +319,7 @@ namespace Client
             this.lbName2.BackColor = System.Drawing.Color.Transparent;
             this.lbName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName2.ForeColor = System.Drawing.Color.White;
-            this.lbName2.Location = new System.Drawing.Point(1038, 115);
+            this.lbName2.Location = new System.Drawing.Point(1068, 110);
             this.lbName2.Name = "lbName2";
             this.lbName2.Size = new System.Drawing.Size(96, 29);
             this.lbName2.TabIndex = 7;

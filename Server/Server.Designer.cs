@@ -49,7 +49,7 @@ namespace Server
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Stencil", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightPink;
-            this.label1.Location = new System.Drawing.Point(330, 16);
+            this.label1.Location = new System.Drawing.Point(292, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 47);
             this.label1.TabIndex = 1;
@@ -59,6 +59,7 @@ namespace Server
             // 
             this.btFetchQuestion.BackColor = System.Drawing.Color.Pink;
             this.btFetchQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btFetchQuestion.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btFetchQuestion.Location = new System.Drawing.Point(570, 41);
             this.btFetchQuestion.Name = "btFetchQuestion";
             this.btFetchQuestion.Size = new System.Drawing.Size(163, 48);
