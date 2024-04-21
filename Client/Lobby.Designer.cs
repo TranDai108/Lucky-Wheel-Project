@@ -50,7 +50,7 @@
             // 
             // rtbNotify
             // 
-            this.rtbNotify.Location = new System.Drawing.Point(795, 71);
+            this.rtbNotify.Location = new System.Drawing.Point(838, 71);
             this.rtbNotify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtbNotify.Name = "rtbNotify";
             this.rtbNotify.Size = new System.Drawing.Size(310, 374);
@@ -59,20 +59,25 @@
             // 
             // btLeave
             // 
-            this.btLeave.Location = new System.Drawing.Point(448, 474);
+            this.btLeave.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btLeave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLeave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btLeave.Location = new System.Drawing.Point(1025, 593);
             this.btLeave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btLeave.Name = "btLeave";
-            this.btLeave.Size = new System.Drawing.Size(130, 52);
+            this.btLeave.Size = new System.Drawing.Size(145, 64);
             this.btLeave.TabIndex = 11;
-            this.btLeave.Text = "Thoát phòng";
-            this.btLeave.UseVisualStyleBackColor = true;
+            this.btLeave.Text = "THOÁT";
+            this.btLeave.UseVisualStyleBackColor = false;
             this.btLeave.Click += new System.EventHandler(this.btLeave_Click);
             // 
             // groupBoxP3
             // 
             this.groupBoxP3.Controls.Add(this.pictureBoxP3);
             this.groupBoxP3.Controls.Add(this.labelP3);
-            this.groupBoxP3.Location = new System.Drawing.Point(530, 60);
+            this.groupBoxP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxP3.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP3.Location = new System.Drawing.Point(541, 60);
             this.groupBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP3.Name = "groupBoxP3";
             this.groupBoxP3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -105,7 +110,9 @@
             // 
             this.groupBoxP2.Controls.Add(this.labelP2);
             this.groupBoxP2.Controls.Add(this.pictureBoxP2);
-            this.groupBoxP2.Location = new System.Drawing.Point(280, 60);
+            this.groupBoxP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxP2.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP2.Location = new System.Drawing.Point(291, 60);
             this.groupBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP2.Name = "groupBoxP2";
             this.groupBoxP2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -117,7 +124,7 @@
             // labelP2
             // 
             this.labelP2.AutoSize = true;
-            this.labelP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelP2.Location = new System.Drawing.Point(81, 341);
             this.labelP2.Name = "labelP2";
             this.labelP2.Size = new System.Drawing.Size(30, 26);
@@ -139,7 +146,9 @@
             // 
             this.groupBoxP1.Controls.Add(this.pictureBoxP1);
             this.groupBoxP1.Controls.Add(this.labelP1);
-            this.groupBoxP1.Location = new System.Drawing.Point(31, 60);
+            this.groupBoxP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxP1.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP1.Location = new System.Drawing.Point(42, 60);
             this.groupBoxP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP1.Name = "groupBoxP1";
             this.groupBoxP1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -161,7 +170,7 @@
             // labelP1
             // 
             this.labelP1.AutoSize = true;
-            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelP1.Location = new System.Drawing.Point(78, 341);
             this.labelP1.Name = "labelP1";
             this.labelP1.Size = new System.Drawing.Size(30, 26);
@@ -171,21 +180,25 @@
             // 
             // btStart
             // 
+            this.btStart.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btStart.Enabled = false;
-            this.btStart.Location = new System.Drawing.Point(219, 474);
+            this.btStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btStart.Location = new System.Drawing.Point(651, 479);
             this.btStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(132, 52);
+            this.btStart.Size = new System.Drawing.Size(149, 64);
             this.btStart.TabIndex = 6;
-            this.btStart.Text = "Bắt đầu ";
-            this.btStart.UseVisualStyleBackColor = true;
+            this.btStart.Text = "BẮT ĐẦU";
+            this.btStart.UseVisualStyleBackColor = false;
             this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // Lobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 607);
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ClientSize = new System.Drawing.Size(1194, 679);
             this.Controls.Add(this.rtbNotify);
             this.Controls.Add(this.btLeave);
             this.Controls.Add(this.groupBoxP3);

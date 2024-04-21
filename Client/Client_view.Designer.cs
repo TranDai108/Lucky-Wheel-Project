@@ -85,7 +85,7 @@ namespace Client
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(109, 24);
             this.labelQuestion.TabIndex = 2;
-            this.labelQuestion.Text = "Câu hỏi";
+            this.labelQuestion.Text = "CÂU HỎI";
             // 
             // tbScore
             // 
@@ -108,7 +108,7 @@ namespace Client
             this.lbName3.BackColor = System.Drawing.Color.Transparent;
             this.lbName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName3.ForeColor = System.Drawing.Color.White;
-            this.lbName3.Location = new System.Drawing.Point(1056, 224);
+            this.lbName3.Location = new System.Drawing.Point(1038, 224);
             this.lbName3.Name = "lbName3";
             this.lbName3.Size = new System.Drawing.Size(96, 29);
             this.lbName3.TabIndex = 2;
@@ -120,7 +120,7 @@ namespace Client
             this.tbScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbScore2.BackColor = System.Drawing.Color.White;
             this.tbScore2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbScore2.Location = new System.Drawing.Point(1061, 147);
+            this.tbScore2.Location = new System.Drawing.Point(1043, 147);
             this.tbScore2.Multiline = true;
             this.tbScore2.Name = "tbScore2";
             this.tbScore2.ReadOnly = true;
@@ -132,7 +132,7 @@ namespace Client
             // 
             this.tbScore3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbScore3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbScore3.Location = new System.Drawing.Point(1061, 256);
+            this.tbScore3.Location = new System.Drawing.Point(1043, 256);
             this.tbScore3.Multiline = true;
             this.tbScore3.Name = "tbScore3";
             this.tbScore3.ReadOnly = true;
@@ -149,7 +149,7 @@ namespace Client
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1067, 13);
+            this.label5.Location = new System.Drawing.Point(1049, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 2;
@@ -161,10 +161,10 @@ namespace Client
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbRound.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbRound.Location = new System.Drawing.Point(1052, 45);
+            this.tbRound.Location = new System.Drawing.Point(1043, 45);
             this.tbRound.Multiline = true;
             this.tbRound.Name = "tbRound";
-            this.tbRound.Size = new System.Drawing.Size(109, 36);
+            this.tbRound.Size = new System.Drawing.Size(91, 40);
             this.tbRound.TabIndex = 3;
             this.tbRound.Text = "1";
             this.tbRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -172,9 +172,9 @@ namespace Client
             // lbComment
             // 
             this.lbComment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbComment.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbComment.BackColor = System.Drawing.Color.LightBlue;
             this.lbComment.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbComment.ForeColor = System.Drawing.Color.Brown;
+            this.lbComment.ForeColor = System.Drawing.Color.Black;
             this.lbComment.Location = new System.Drawing.Point(26, 380);
             this.lbComment.Name = "lbComment";
             this.lbComment.Size = new System.Drawing.Size(275, 77);
@@ -319,7 +319,7 @@ namespace Client
             this.lbName2.BackColor = System.Drawing.Color.Transparent;
             this.lbName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName2.ForeColor = System.Drawing.Color.White;
-            this.lbName2.Location = new System.Drawing.Point(1056, 115);
+            this.lbName2.Location = new System.Drawing.Point(1038, 115);
             this.lbName2.Name = "lbName2";
             this.lbName2.Size = new System.Drawing.Size(96, 29);
             this.lbName2.TabIndex = 7;
@@ -328,13 +328,15 @@ namespace Client
             // 
             // btWheel
             // 
+            this.btWheel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btWheel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btWheel.Location = new System.Drawing.Point(914, 537);
+            this.btWheel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btWheel.Location = new System.Drawing.Point(914, 535);
             this.btWheel.Name = "btWheel";
             this.btWheel.Size = new System.Drawing.Size(167, 65);
             this.btWheel.TabIndex = 8;
             this.btWheel.Text = "Vòng Quay";
-            this.btWheel.UseVisualStyleBackColor = true;
+            this.btWheel.UseVisualStyleBackColor = false;
             this.btWheel.Click += new System.EventHandler(this.btWheel_Click);
             // 
             // lbQuestion
@@ -353,6 +355,7 @@ namespace Client
             this.btnU.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnU.AutoSize = true;
             this.btnU.BackColor = System.Drawing.Color.LightPink;
+            this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnU.Location = new System.Drawing.Point(468, 614);
             this.btnU.Name = "btnU";
             this.btnU.Size = new System.Drawing.Size(46, 45);
@@ -367,6 +370,7 @@ namespace Client
             this.btnT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnT.AutoSize = true;
             this.btnT.BackColor = System.Drawing.Color.LightPink;
+            this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT.Location = new System.Drawing.Point(395, 614);
             this.btnT.Name = "btnT";
             this.btnT.Size = new System.Drawing.Size(46, 45);
@@ -381,6 +385,7 @@ namespace Client
             this.btnS.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnS.AutoSize = true;
             this.btnS.BackColor = System.Drawing.Color.LightPink;
+            this.btnS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS.Location = new System.Drawing.Point(541, 614);
             this.btnS.Name = "btnS";
             this.btnS.Size = new System.Drawing.Size(46, 45);
@@ -395,6 +400,7 @@ namespace Client
             this.btnV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnV.AutoSize = true;
             this.btnV.BackColor = System.Drawing.Color.LightPink;
+            this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnV.Location = new System.Drawing.Point(613, 614);
             this.btnV.Name = "btnV";
             this.btnV.Size = new System.Drawing.Size(46, 45);
@@ -409,6 +415,7 @@ namespace Client
             this.btnR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnR.AutoSize = true;
             this.btnR.BackColor = System.Drawing.Color.LightPink;
+            this.btnR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR.Location = new System.Drawing.Point(816, 550);
             this.btnR.Name = "btnR";
             this.btnR.Size = new System.Drawing.Size(46, 45);
@@ -423,6 +430,7 @@ namespace Client
             this.btnX.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnX.AutoSize = true;
             this.btnX.BackColor = System.Drawing.Color.LightPink;
+            this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.Location = new System.Drawing.Point(680, 614);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(46, 45);
@@ -437,6 +445,7 @@ namespace Client
             this.btnQ.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnQ.AutoSize = true;
             this.btnQ.BackColor = System.Drawing.Color.LightPink;
+            this.btnQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQ.Location = new System.Drawing.Point(747, 550);
             this.btnQ.Name = "btnQ";
             this.btnQ.Size = new System.Drawing.Size(46, 45);
@@ -451,6 +460,7 @@ namespace Client
             this.btnY.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnY.AutoSize = true;
             this.btnY.BackColor = System.Drawing.Color.LightPink;
+            this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY.Location = new System.Drawing.Point(747, 614);
             this.btnY.Name = "btnY";
             this.btnY.Size = new System.Drawing.Size(46, 45);
@@ -465,6 +475,7 @@ namespace Client
             this.btnP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnP.AutoSize = true;
             this.btnP.BackColor = System.Drawing.Color.LightPink;
+            this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnP.Location = new System.Drawing.Point(680, 550);
             this.btnP.Name = "btnP";
             this.btnP.Size = new System.Drawing.Size(46, 45);
@@ -479,6 +490,7 @@ namespace Client
             this.btnO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnO.AutoSize = true;
             this.btnO.BackColor = System.Drawing.Color.LightPink;
+            this.btnO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnO.Location = new System.Drawing.Point(613, 550);
             this.btnO.Name = "btnO";
             this.btnO.Size = new System.Drawing.Size(46, 45);
@@ -493,6 +505,7 @@ namespace Client
             this.btnN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnN.AutoSize = true;
             this.btnN.BackColor = System.Drawing.Color.LightPink;
+            this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnN.Location = new System.Drawing.Point(541, 550);
             this.btnN.Name = "btnN";
             this.btnN.Size = new System.Drawing.Size(46, 45);
@@ -507,6 +520,7 @@ namespace Client
             this.btnM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnM.AutoSize = true;
             this.btnM.BackColor = System.Drawing.Color.LightPink;
+            this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnM.Location = new System.Drawing.Point(468, 550);
             this.btnM.Name = "btnM";
             this.btnM.Size = new System.Drawing.Size(46, 45);
@@ -521,6 +535,7 @@ namespace Client
             this.btnL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnL.AutoSize = true;
             this.btnL.BackColor = System.Drawing.Color.LightPink;
+            this.btnL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnL.Location = new System.Drawing.Point(395, 550);
             this.btnL.Name = "btnL";
             this.btnL.Size = new System.Drawing.Size(46, 45);
@@ -535,6 +550,7 @@ namespace Client
             this.btnK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnK.AutoSize = true;
             this.btnK.BackColor = System.Drawing.Color.LightPink;
+            this.btnK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnK.Location = new System.Drawing.Point(324, 550);
             this.btnK.Name = "btnK";
             this.btnK.Size = new System.Drawing.Size(46, 45);
@@ -549,6 +565,7 @@ namespace Client
             this.btnI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnI.AutoSize = true;
             this.btnI.BackColor = System.Drawing.Color.LightPink;
+            this.btnI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnI.Location = new System.Drawing.Point(816, 490);
             this.btnI.Name = "btnI";
             this.btnI.Size = new System.Drawing.Size(46, 45);
@@ -563,6 +580,7 @@ namespace Client
             this.btnH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnH.AutoSize = true;
             this.btnH.BackColor = System.Drawing.Color.LightPink;
+            this.btnH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnH.Location = new System.Drawing.Point(747, 490);
             this.btnH.Name = "btnH";
             this.btnH.Size = new System.Drawing.Size(46, 45);
@@ -577,6 +595,7 @@ namespace Client
             this.btnG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnG.AutoSize = true;
             this.btnG.BackColor = System.Drawing.Color.LightPink;
+            this.btnG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnG.Location = new System.Drawing.Point(680, 490);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(46, 45);
@@ -591,6 +610,7 @@ namespace Client
             this.btnE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnE.AutoSize = true;
             this.btnE.BackColor = System.Drawing.Color.LightPink;
+            this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnE.Location = new System.Drawing.Point(613, 490);
             this.btnE.Name = "btnE";
             this.btnE.Size = new System.Drawing.Size(46, 45);
@@ -605,6 +625,7 @@ namespace Client
             this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnD.AutoSize = true;
             this.btnD.BackColor = System.Drawing.Color.LightPink;
+            this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD.Location = new System.Drawing.Point(541, 490);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(46, 45);
@@ -619,6 +640,7 @@ namespace Client
             this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnC.AutoSize = true;
             this.btnC.BackColor = System.Drawing.Color.LightPink;
+            this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.Location = new System.Drawing.Point(468, 490);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(46, 45);
@@ -633,6 +655,7 @@ namespace Client
             this.btnB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnB.AutoSize = true;
             this.btnB.BackColor = System.Drawing.Color.LightPink;
+            this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB.Location = new System.Drawing.Point(395, 490);
             this.btnB.Name = "btnB";
             this.btnB.Size = new System.Drawing.Size(46, 45);
@@ -647,6 +670,7 @@ namespace Client
             this.btnA.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnA.AutoSize = true;
             this.btnA.BackColor = System.Drawing.Color.LightPink;
+            this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA.Location = new System.Drawing.Point(324, 490);
             this.btnA.Name = "btnA";
             this.btnA.Size = new System.Drawing.Size(46, 45);
