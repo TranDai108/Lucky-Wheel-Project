@@ -50,9 +50,9 @@ namespace Client
             this.lbWinnerName.AutoSize = true;
             this.lbWinnerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWinnerName.ForeColor = System.Drawing.Color.White;
-            this.lbWinnerName.Location = new System.Drawing.Point(350, 229);
+            this.lbWinnerName.Location = new System.Drawing.Point(355, 250);
             this.lbWinnerName.Name = "lbWinnerName";
-            this.lbWinnerName.Size = new System.Drawing.Size(73, 32);
+            this.lbWinnerName.Size = new System.Drawing.Size(74, 32);
             this.lbWinnerName.TabIndex = 1;
             this.lbWinnerName.Text = "TÊN";
             // 
@@ -61,9 +61,9 @@ namespace Client
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(216, 149);
+            this.label1.Location = new System.Drawing.Point(226, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 32);
+            this.label1.Size = new System.Drawing.Size(346, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "NGƯỜI CHIẾN THẮNG LÀ";
             // 
