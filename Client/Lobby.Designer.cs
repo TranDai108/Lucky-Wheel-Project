@@ -59,7 +59,7 @@
             // 
             // btLeave
             // 
-            this.btLeave.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btLeave.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btLeave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLeave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btLeave.Location = new System.Drawing.Point(1025, 593);
@@ -73,10 +73,11 @@
             // 
             // groupBoxP3
             // 
+            this.groupBoxP3.BackColor = System.Drawing.Color.Honeydew;
             this.groupBoxP3.Controls.Add(this.pictureBoxP3);
             this.groupBoxP3.Controls.Add(this.labelP3);
             this.groupBoxP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxP3.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP3.ForeColor = System.Drawing.Color.Black;
             this.groupBoxP3.Location = new System.Drawing.Point(541, 60);
             this.groupBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP3.Name = "groupBoxP3";
@@ -108,10 +109,11 @@
             // 
             // groupBoxP2
             // 
+            this.groupBoxP2.BackColor = System.Drawing.Color.Honeydew;
             this.groupBoxP2.Controls.Add(this.labelP2);
             this.groupBoxP2.Controls.Add(this.pictureBoxP2);
             this.groupBoxP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxP2.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP2.ForeColor = System.Drawing.Color.Black;
             this.groupBoxP2.Location = new System.Drawing.Point(291, 60);
             this.groupBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP2.Name = "groupBoxP2";
@@ -144,10 +146,11 @@
             // 
             // groupBoxP1
             // 
+            this.groupBoxP1.BackColor = System.Drawing.Color.Honeydew;
             this.groupBoxP1.Controls.Add(this.pictureBoxP1);
             this.groupBoxP1.Controls.Add(this.labelP1);
             this.groupBoxP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxP1.ForeColor = System.Drawing.Color.White;
+            this.groupBoxP1.ForeColor = System.Drawing.Color.Black;
             this.groupBoxP1.Location = new System.Drawing.Point(42, 60);
             this.groupBoxP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP1.Name = "groupBoxP1";
@@ -180,11 +183,11 @@
             // 
             // btStart
             // 
-            this.btStart.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btStart.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btStart.Enabled = false;
             this.btStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btStart.Location = new System.Drawing.Point(651, 479);
+            this.btStart.Location = new System.Drawing.Point(349, 483);
             this.btStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btStart.Name = "btStart";
             this.btStart.Size = new System.Drawing.Size(149, 64);
@@ -197,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1194, 679);
             this.Controls.Add(this.rtbNotify);
             this.Controls.Add(this.btLeave);

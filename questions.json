@@ -17,14 +17,6 @@
       "answer": "PHAP"
     },
     {
-      "question": "Trong hệ mặt trời, hành tinh nào gần nhất với mặt trời?",
-      "answer": "MERCURY"
-    },
-    {
-      "question": "Ai là nhà phê bình âm nhạc nổi tiếng của Việt Nam?",
-      "answer": "TRINHCONGSON"
-    },
-    {
       "question": "Ngôn ngữ lập trình nào được sử dụng nhiều nhất trên thế giới?",
       "answer": "PYTHON"
     },
@@ -36,9 +28,5 @@
       "question": "Nước nào nổi tiếng với ngọn núi Everest?",
       "answer": "NEPAL"
     },
-    {
-      "question": "Ai là người đầu tiên đặt chân lên mặt trăng?",
-      "answer": "ARMSTRONG"
-    }
   ]
 }

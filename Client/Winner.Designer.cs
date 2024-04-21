@@ -29,41 +29,31 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbNotify = new System.Windows.Forms.Label();
             this.lbWinnerName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lbNotify
-            // 
-            this.lbNotify.AutoSize = true;
-            this.lbNotify.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNotify.ForeColor = System.Drawing.Color.White;
-            this.lbNotify.Location = new System.Drawing.Point(319, 48);
-            this.lbNotify.Name = "lbNotify";
-            this.lbNotify.Size = new System.Drawing.Size(139, 38);
-            this.lbNotify.TabIndex = 0;
-            this.lbNotify.Text = "WINNER";
-            // 
             // lbWinnerName
             // 
             this.lbWinnerName.AutoSize = true;
-            this.lbWinnerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWinnerName.BackColor = System.Drawing.Color.Transparent;
+            this.lbWinnerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWinnerName.ForeColor = System.Drawing.Color.White;
-            this.lbWinnerName.Location = new System.Drawing.Point(355, 250);
+            this.lbWinnerName.Location = new System.Drawing.Point(364, 194);
             this.lbWinnerName.Name = "lbWinnerName";
-            this.lbWinnerName.Size = new System.Drawing.Size(74, 32);
+            this.lbWinnerName.Size = new System.Drawing.Size(103, 46);
             this.lbWinnerName.TabIndex = 1;
             this.lbWinnerName.Text = "TÊN";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(226, 160);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(220, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 32);
+            this.label1.Size = new System.Drawing.Size(409, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "NGƯỜI CHIẾN THẮNG LÀ";
             // 
@@ -72,10 +62,11 @@ namespace Client
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackgroundImage = global::Client.Properties.Resources.winner;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbWinnerName);
-            this.Controls.Add(this.lbNotify);
             this.Name = "Winner";
             this.Text = "Winner";
             this.ResumeLayout(false);
@@ -84,8 +75,6 @@ namespace Client
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbNotify;
         private System.Windows.Forms.Label lbWinnerName;
         private System.Windows.Forms.Label label1;
     }

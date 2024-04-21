@@ -63,11 +63,11 @@ namespace Client
             // 
             this.lbStart.AutoSize = true;
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
-            this.lbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStart.Location = new System.Drawing.Point(225, 441);
+            this.lbStart.Location = new System.Drawing.Point(174, 433);
             this.lbStart.Name = "lbStart";
-            this.lbStart.Size = new System.Drawing.Size(428, 40);
+            this.lbStart.Size = new System.Drawing.Size(476, 46);
             this.lbStart.TabIndex = 2;
             this.lbStart.Text = "VÒNG QUAY MAY MẮN";
             this.lbStart.Click += new System.EventHandler(this.lbStart_Click);
@@ -98,7 +98,7 @@ namespace Client
             // 
             // textBoxIP
             // 
-            this.textBoxIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIP.Location = new System.Drawing.Point(619, 198);
             this.textBoxIP.Multiline = true;
             this.textBoxIP.Name = "textBoxIP";

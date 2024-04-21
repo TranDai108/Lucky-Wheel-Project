@@ -36,7 +36,8 @@ namespace Server
             // 
             // rtbServer
             // 
-            this.rtbServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbServer.BackColor = System.Drawing.SystemColors.Info;
+            this.rtbServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbServer.Location = new System.Drawing.Point(61, 97);
             this.rtbServer.Name = "rtbServer";
             this.rtbServer.Size = new System.Drawing.Size(672, 318);
@@ -46,17 +47,17 @@ namespace Server
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Stencil", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(334, 30);
+            this.label1.Font = new System.Drawing.Font("Stencil", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightPink;
+            this.label1.Location = new System.Drawing.Point(330, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 38);
+            this.label1.Size = new System.Drawing.Size(174, 47);
             this.label1.TabIndex = 1;
             this.label1.Text = "SERVER";
             // 
             // btFetchQuestion
             // 
-            this.btFetchQuestion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btFetchQuestion.BackColor = System.Drawing.Color.Pink;
             this.btFetchQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFetchQuestion.Location = new System.Drawing.Point(570, 41);
             this.btFetchQuestion.Name = "btFetchQuestion";
@@ -70,7 +71,7 @@ namespace Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btFetchQuestion);
             this.Controls.Add(this.label1);
