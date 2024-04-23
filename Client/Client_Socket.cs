@@ -48,8 +48,7 @@ namespace Client
                         msg += Encoding.UTF8.GetString(buffer, 0, bRead);
                     }
 
-                    AnalyzingReturnMessage(msg);
-                    Login_view.lobby.Tempdisplay(msg);
+                    AnalyzingReturnMessage(msg);                    
                     
 
                 }
@@ -68,6 +67,7 @@ namespace Client
                 case "LOBBYINFO":
                     {
                         Login_view.lobby.DisplayConnectedPlayer(Payload[1]);
+
                         //Kiem tra dieu kien khi da du nguoi moi duoc an nut start tro choi
                         if (Login_view.lobby.connectedPlayer == 3)
                             Login_view.lobby.Disable_Enable_Start(true);

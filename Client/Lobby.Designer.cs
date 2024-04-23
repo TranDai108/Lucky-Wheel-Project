@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtbNotify = new System.Windows.Forms.RichTextBox();
             this.btLeave = new System.Windows.Forms.Button();
             this.groupBoxP3 = new System.Windows.Forms.GroupBox();
             this.pictureBoxP3 = new System.Windows.Forms.PictureBox();
@@ -48,26 +47,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxP1)).BeginInit();
             this.SuspendLayout();
             // 
-            // rtbNotify
-            // 
-            this.rtbNotify.Location = new System.Drawing.Point(838, 71);
-            this.rtbNotify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.rtbNotify.Name = "rtbNotify";
-            this.rtbNotify.Size = new System.Drawing.Size(310, 374);
-            this.rtbNotify.TabIndex = 12;
-            this.rtbNotify.Text = "";
-            // 
             // btLeave
             // 
             this.btLeave.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.btLeave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLeave.Font = new System.Drawing.Font("Bauhaus 93", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLeave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btLeave.Location = new System.Drawing.Point(1025, 593);
+            this.btLeave.Location = new System.Drawing.Point(1078, 602);
             this.btLeave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btLeave.Name = "btLeave";
-            this.btLeave.Size = new System.Drawing.Size(145, 64);
+            this.btLeave.Size = new System.Drawing.Size(104, 64);
             this.btLeave.TabIndex = 11;
-            this.btLeave.Text = "THOÁT";
+            this.btLeave.Text = "EXIT";
             this.btLeave.UseVisualStyleBackColor = false;
             this.btLeave.Click += new System.EventHandler(this.btLeave_Click);
             // 
@@ -78,7 +68,7 @@
             this.groupBoxP3.Controls.Add(this.labelP3);
             this.groupBoxP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxP3.ForeColor = System.Drawing.Color.Black;
-            this.groupBoxP3.Location = new System.Drawing.Point(541, 60);
+            this.groupBoxP3.Location = new System.Drawing.Point(807, 153);
             this.groupBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP3.Name = "groupBoxP3";
             this.groupBoxP3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -89,7 +79,7 @@
             // 
             // pictureBoxP3
             // 
-            this.pictureBoxP3.Location = new System.Drawing.Point(23, 74);
+            this.pictureBoxP3.Location = new System.Drawing.Point(16, 74);
             this.pictureBoxP3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxP3.Name = "pictureBoxP3";
             this.pictureBoxP3.Size = new System.Drawing.Size(214, 238);
@@ -99,10 +89,10 @@
             // labelP3
             // 
             this.labelP3.AutoSize = true;
-            this.labelP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelP3.Location = new System.Drawing.Point(79, 341);
+            this.labelP3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelP3.Location = new System.Drawing.Point(104, 341);
             this.labelP3.Name = "labelP3";
-            this.labelP3.Size = new System.Drawing.Size(30, 26);
+            this.labelP3.Size = new System.Drawing.Size(33, 26);
             this.labelP3.TabIndex = 1;
             this.labelP3.Text = "...";
             this.labelP3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,11 +104,11 @@
             this.groupBoxP2.Controls.Add(this.pictureBoxP2);
             this.groupBoxP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxP2.ForeColor = System.Drawing.Color.Black;
-            this.groupBoxP2.Location = new System.Drawing.Point(291, 60);
+            this.groupBoxP2.Location = new System.Drawing.Point(470, 153);
             this.groupBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP2.Name = "groupBoxP2";
             this.groupBoxP2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxP2.Size = new System.Drawing.Size(243, 385);
+            this.groupBoxP2.Size = new System.Drawing.Size(259, 385);
             this.groupBoxP2.TabIndex = 9;
             this.groupBoxP2.TabStop = false;
             this.groupBoxP2.Text = "PLAYER 2";
@@ -126,10 +116,10 @@
             // labelP2
             // 
             this.labelP2.AutoSize = true;
-            this.labelP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelP2.Location = new System.Drawing.Point(81, 341);
+            this.labelP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelP2.Location = new System.Drawing.Point(100, 341);
             this.labelP2.Name = "labelP2";
-            this.labelP2.Size = new System.Drawing.Size(30, 26);
+            this.labelP2.Size = new System.Drawing.Size(33, 26);
             this.labelP2.TabIndex = 3;
             this.labelP2.Text = "...";
             this.labelP2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +127,7 @@
             // pictureBoxP2
             // 
             this.pictureBoxP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxP2.Location = new System.Drawing.Point(15, 74);
+            this.pictureBoxP2.Location = new System.Drawing.Point(22, 74);
             this.pictureBoxP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxP2.Name = "pictureBoxP2";
             this.pictureBoxP2.Size = new System.Drawing.Size(214, 238);
@@ -151,7 +141,7 @@
             this.groupBoxP1.Controls.Add(this.labelP1);
             this.groupBoxP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxP1.ForeColor = System.Drawing.Color.Black;
-            this.groupBoxP1.Location = new System.Drawing.Point(42, 60);
+            this.groupBoxP1.Location = new System.Drawing.Point(143, 153);
             this.groupBoxP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxP1.Name = "groupBoxP1";
             this.groupBoxP1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -173,10 +163,10 @@
             // labelP1
             // 
             this.labelP1.AutoSize = true;
-            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelP1.Location = new System.Drawing.Point(78, 341);
+            this.labelP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelP1.Location = new System.Drawing.Point(87, 341);
             this.labelP1.Name = "labelP1";
-            this.labelP1.Size = new System.Drawing.Size(30, 26);
+            this.labelP1.Size = new System.Drawing.Size(33, 26);
             this.labelP1.TabIndex = 0;
             this.labelP1.Text = "...";
             this.labelP1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,14 +175,14 @@
             // 
             this.btStart.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btStart.Enabled = false;
-            this.btStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btStart.Font = new System.Drawing.Font("Bauhaus 93", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btStart.Location = new System.Drawing.Point(349, 483);
+            this.btStart.Location = new System.Drawing.Point(470, 575);
             this.btStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(149, 64);
+            this.btStart.Size = new System.Drawing.Size(259, 64);
             this.btStart.TabIndex = 6;
-            this.btStart.Text = "BẮT ĐẦU";
+            this.btStart.Text = "START";
             this.btStart.UseVisualStyleBackColor = false;
             this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
@@ -201,13 +191,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
+            this.BackgroundImage = global::Client.Properties.Resources.LOBBY;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1194, 679);
-            this.Controls.Add(this.rtbNotify);
             this.Controls.Add(this.btLeave);
             this.Controls.Add(this.groupBoxP3);
             this.Controls.Add(this.groupBoxP2);
             this.Controls.Add(this.groupBoxP1);
             this.Controls.Add(this.btStart);
+            this.DoubleBuffered = true;
             this.Name = "Lobby";
             this.Text = "Lobby";
             this.groupBoxP3.ResumeLayout(false);
@@ -224,8 +216,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox rtbNotify;
         private System.Windows.Forms.Button btLeave;
         private System.Windows.Forms.GroupBox groupBoxP3;
         private System.Windows.Forms.PictureBox pictureBoxP3;

@@ -63,14 +63,13 @@ namespace Client
             // 
             this.lbStart.AutoSize = true;
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
-            this.lbStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbStart.Location = new System.Drawing.Point(174, 433);
+            this.lbStart.Font = new System.Drawing.Font("Palatino Linotype", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbStart.ForeColor = System.Drawing.Color.Yellow;
+            this.lbStart.Location = new System.Drawing.Point(160, 432);
             this.lbStart.Name = "lbStart";
-            this.lbStart.Size = new System.Drawing.Size(476, 46);
+            this.lbStart.Size = new System.Drawing.Size(500, 55);
             this.lbStart.TabIndex = 2;
             this.lbStart.Text = "VÒNG QUAY MAY MẮN";
-            this.lbStart.Click += new System.EventHandler(this.lbStart_Click);
             // 
             // btCreate
             // 

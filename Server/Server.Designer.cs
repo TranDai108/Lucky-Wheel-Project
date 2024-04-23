@@ -40,6 +40,7 @@ namespace Server
             this.rtbServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbServer.Location = new System.Drawing.Point(61, 97);
             this.rtbServer.Name = "rtbServer";
+            this.rtbServer.ReadOnly = true;
             this.rtbServer.Size = new System.Drawing.Size(672, 318);
             this.rtbServer.TabIndex = 0;
             this.rtbServer.Text = "Vui lòng chọn file câu hỏi trước khi chơi (file json)";

@@ -20,19 +20,12 @@ namespace Client
         {
             InitializeComponent();
         }
-
-        private void lbStart_Click(object sender, EventArgs e)
-        {
-            ClientView client = new ClientView();
-            client.ShowDialog();
-        }
-        
-
+                
         private void btCreate_Click(object sender, EventArgs e)
         {
             if(tbName.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên người chơi trước khi thamg gia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên người chơi trước khi tham gia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
                 

@@ -19,6 +19,7 @@ namespace Client
         public Lobby()
         {
             InitializeComponent();
+            //Khoa kiem tra luong de khong bi Cross-thread
             CheckForIllegalCrossThreadCalls = false;
             lobby = this;
             btStart.Visible = false;
@@ -26,17 +27,6 @@ namespace Client
         public void ShowStartButton()
         {
             btStart.Visible = true;
-        }
-        public void Tempdisplay(string msg)
-        {
-            if (rtbNotify.InvokeRequired)
-            {
-                rtbNotify.Invoke(new Action<string>(Tempdisplay), msg);
-                return;
-            }
-
-            rtbNotify.Text += msg + '\n';            
-
         }
         public void Disable_Enable_Start(bool check)
         {

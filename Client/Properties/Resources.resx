@@ -133,4 +133,10 @@
   <data name="winner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\winner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LOBBY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOBBY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Winner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Winner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

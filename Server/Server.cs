@@ -165,7 +165,7 @@ namespace Server
 
                         foreach (var player in connectedPlayers)
                         {
-                            string makemsg_ = "TURN;" + connectedPlayers[currentturn - 1].name;
+                            string makemsg_ = "TURN;" + connectedPlayers[currentturn - 1].name;                            
                             byte[] buffer_ = Encoding.UTF8.GetBytes(makemsg_);
                             player.playerSocket.Send(buffer_);
                             Console.WriteLine("Sendback: " + makemsg_);
@@ -179,7 +179,7 @@ namespace Server
                         {
                             if (player.playerSocket != p.playerSocket)
                             {
-                                byte[] buffer = Encoding.UTF8.GetBytes("CR;" + arrPayload[1]);
+                                byte[] buffer = Encoding.UTF8.GetBytes("CR;" + arrPayload[1]); //CR + character
                                 player.playerSocket.Send(buffer);                                
                             }
                         }
@@ -192,7 +192,7 @@ namespace Server
                             currentturn = 1;
                         foreach (var player in connectedPlayers)
                         {
-                            byte[] buffer = Encoding.UTF8.GetBytes("CW;" + arrPayload[1]);
+                            byte[] buffer = Encoding.UTF8.GetBytes("CW;" + arrPayload[1]); //CW + character
                             player.playerSocket.Send(buffer);
                             Thread.Sleep(100);
                             buffer = Encoding.UTF8.GetBytes("TURN;" + connectedPlayers[currentturn - 1].name);
@@ -220,6 +220,7 @@ namespace Server
                     break;
                 case "WIN_ROUND":
                     {
+                        //Tuong tu buoc set up tuy nhien phai cap nhat them vong choi tiep theo
                         currentround++;
                         if(currentround > 3)
                         {                                                        
@@ -352,6 +353,20 @@ namespace Server
 
             rtbServer.Text += message + Environment.NewLine;
         }
+        private void btFetchQuestion_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Đường dẫn của file được chọn
+                MessageBox.Show("Nạp câu hỏi thành công !", "Thông báo", MessageBoxButtons.OK);
+                questionPath = openFileDialog.FileName;
+
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -367,21 +382,7 @@ namespace Server
             });
             serverlisten.Start();
         }
-
-        private void btFetchQuestion_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                // Đường dẫn của file được chọn
-                questionPath = openFileDialog.FileName;                
-                
-            }
-        }
-
+        
         private void Server_FormClosing(object sender, FormClosingEventArgs e)
         {
             serverSocket.Close();

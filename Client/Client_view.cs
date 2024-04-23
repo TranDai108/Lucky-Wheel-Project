@@ -75,9 +75,7 @@ namespace Client
                 lbName3.Text = Client_Socket.otherPlayers[1].name;
                 tbScore3.Text = Client_Socket.otherPlayers[1].score;
                 tbScore3.Tag = lbName3.Text;
-            }                        
-            /*lbNames.Add(lbName2);
-            tbScores.Add(tbScore2);*/            
+            }                                
         }
         public void Allow_Playing()
         {
@@ -337,6 +335,10 @@ namespace Client
             allowState_button(false);
         }
 
-        
+        private void ClientView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           /* Client_Socket.datatype = "DISCONNECT";
+            Client_Socket.SendMessage(Player.name);*/
+        }
     }
 }
