@@ -81,7 +81,7 @@ namespace Client
             this.labelQuestion.BackColor = System.Drawing.Color.Transparent;
             this.labelQuestion.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelQuestion.ForeColor = System.Drawing.Color.White;
-            this.labelQuestion.Location = new System.Drawing.Point(248, 70);
+            this.labelQuestion.Location = new System.Drawing.Point(121, 110);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(126, 29);
             this.labelQuestion.TabIndex = 2;

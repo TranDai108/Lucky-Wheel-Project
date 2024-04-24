@@ -32,13 +32,27 @@ namespace Server
         public Server()
         {
             InitializeComponent();
+            IPAddress ipAddress = GetLocalIPAddress();
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000);
+            IPEndPoint serverEP = new IPEndPoint(ipAddress, 11000);
             serverSocket.Bind(serverEP);
             serverSocket.Listen(3);
             rtbServer.Text += "Chờ đợi kết nối từ người chơi ... \r\n";         
         }
-        
+        static IPAddress GetLocalIPAddress()
+        {
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip;
+                }
+            }
+
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
         public void recvfromClientsocket(Socket client)
         {
             
