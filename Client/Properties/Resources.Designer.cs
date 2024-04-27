@@ -103,9 +103,29 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Wheel_BG {
+            get {
+                object obj = ResourceManager.GetObject("Wheel_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wheel_new {
             get {
                 object obj = ResourceManager.GetObject("wheel_new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wheel_update {
+            get {
+                object obj = ResourceManager.GetObject("wheel_update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

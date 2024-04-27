@@ -28,7 +28,7 @@ namespace Client
         }
         public string get_res()
         {
-            return label1.Text;
+            return btRes.Text;
         }
         public class LuckyCirlce
         {
@@ -40,9 +40,9 @@ namespace Client
 
             public LuckyCirlce()
             {
-                tempObrazek = new Bitmap(Properties.Resources.wheel_new);
-                obrazek = new Bitmap(Properties.Resources.wheel_new);
-                wartosciStanu = new string[] { "+100", "x2", "+200", "Chia đôi", "+100", "+300", "x2", "+200", "Chia đôi", "+100" };
+                tempObrazek = new Bitmap(Properties.Resources.wheel_update);
+                obrazek = new Bitmap(Properties.Resources.wheel_update);
+                wartosciStanu = new string[] { "Mất lượt", "x2", "+1000", "Chia đôi", "Mất lượt", "+300", "x2", "+200", "Chia đôi", "+100" };
                 kat = 0.0f;
             }
 
@@ -78,7 +78,10 @@ namespace Client
                 RotateImage(pictureBox1, koloFortuny.obrazek, koloFortuny.kat);
                 wheelTimes--;
             }
-
+            else
+            {
+                btRes.Enabled = true;
+            }
             koloFortuny.stan = Convert.ToInt32(Math.Ceiling(koloFortuny.kat / 36));
 
             if (koloFortuny.stan == 0)
@@ -90,7 +93,7 @@ namespace Client
                 koloFortuny.stan -= 1;
             }
 
-            label1.Text = Convert.ToString(koloFortuny.wartosciStanu[koloFortuny.stan]);
+            btRes.Text = Convert.ToString(koloFortuny.wartosciStanu[koloFortuny.stan]);
 
 
         }
@@ -114,6 +117,12 @@ namespace Client
             Random rand = new Random();
             wheelTimes = rand.Next(150, 200);    //random số vòng quay     
             wheelTimer.Start();
+
+        }
+
+        private void btRes_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -214,6 +214,18 @@ namespace Server
                         }
                     }
                     break;
+                case "ENDTURN":
+                    {
+                        currentturn++;
+                        if (currentturn > 3)
+                            currentturn = 1;
+                        foreach (var player in connectedPlayers)
+                        {
+                            byte[] buffer = Encoding.UTF8.GetBytes("TURN;" + connectedPlayers[currentturn - 1].name);
+                            player.playerSocket.Send(buffer);
+                        }
+                    }
+                    break;
                 case "SCORE_CHANGED":
                     {
                         foreach (var player in connectedPlayers)

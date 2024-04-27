@@ -101,6 +101,11 @@ namespace Client
                         score += 300;
                     }
                     break;
+                case "+1000":
+                    {
+                        score += 1000;
+                    }
+                    break;
                 case "x2":
                     {
                         score *= 2;
@@ -111,6 +116,17 @@ namespace Client
                         score /= 2;
                     }
                     break;
+                /*case "Mất lượt":
+                    {
+                        this.Invoke((MethodInvoker)delegate ()
+                        {
+                            this.allowState_button(false);                            
+                        }
+                        );
+                        
+                                              
+                    }
+                    break;*/
             }
         }
         public void Turn_Notify(string Name)
@@ -166,13 +182,22 @@ namespace Client
             wheel.ShowDialog();
             wheel_res = wheel.get_res();
             ScoreHandle(wheel_res);
-            
-            foreach (Control control in Controls)
+            if(wheel_res == "Mất lượt")
             {
-                if (control is Button && control.Name != "btWheel")
-                    control.Enabled = true;
+                Client_Socket.datatype = "ENDTURN";
+                Client_Socket.SendMessage(Player.name);
+                allowState_button(false);
             }
-            btWheel.Enabled = false;
+            else
+            {
+                foreach (Control control in Controls)
+                {
+                    if (control is Button && control.Name != "btWheel")
+                        control.Enabled = true;
+                }
+                btWheel.Enabled = false;
+            }
+            
 
         }
         
@@ -263,10 +288,8 @@ namespace Client
             {
                 foreach (Control control in Controls)
                 {
-                    if (control is Button && control.Name != "btWheel")
-                        control.Enabled = false;
-                    if (control is Button && control.Name == "btWheel")
-                        control.Enabled = false;
+                    if (control is Button) // && control.Tag != null && (control.Tag.ToString() == "Character" || control.Name == "btWheel"))
+                        control.Enabled = false;                    
                 }
             }
             else // tra loi dung lan luot thuc hien quay vong quay roi moi chon dap an
