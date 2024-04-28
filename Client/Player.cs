@@ -26,5 +26,6 @@ namespace Client
         public string name { get; set; }
         public string turn { get; set; }
         public string score { get; set; }
+        public string totalScore { get; set; }
     }
 }

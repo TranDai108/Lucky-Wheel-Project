@@ -53,8 +53,6 @@ namespace Client
 
                 }
             }
-            //Terminate this receiving thread when clientSocket is disconnected
-            //recvThread.Abort();
         }
         public static ClientView GamePlay;
         public static Winner WinnerForm;
@@ -88,7 +86,7 @@ namespace Client
                         );
                     }
                     break;
-                case "INGAME": //need to fix bugs 
+                case "INGAME": 
                     {
                         Player.turn = int.Parse(Payload[2]);
                         Player.score = int.Parse(Payload[3]);                                               

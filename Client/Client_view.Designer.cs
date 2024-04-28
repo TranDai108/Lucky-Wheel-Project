@@ -821,7 +821,6 @@ namespace Client
             this.MaximizeBox = false;
             this.Name = "ClientView";
             this.Text = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClientView_FormClosing);
             this.Load += new System.EventHandler(this.ClientView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

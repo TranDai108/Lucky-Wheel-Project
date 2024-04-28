@@ -32,7 +32,7 @@ namespace Client
         //Ham public 
         public void InGameDisplay()
         {
-            //Need to recheck otherplayers 
+            //Luu tru thong tin cua cac Players khac va hien thi theo thu tu
             Client_Socket.otherPlayers.Sort((x, y) => x.turn.CompareTo(y.turn));
             if (Player.turn == 1)
             {
@@ -115,18 +115,7 @@ namespace Client
                     {
                         score /= 2;
                     }
-                    break;
-                /*case "Mất lượt":
-                    {
-                        this.Invoke((MethodInvoker)delegate ()
-                        {
-                            this.allowState_button(false);                            
-                        }
-                        );
-                        
-                                              
-                    }
-                    break;*/
+                    break;                
             }
         }
         public void Turn_Notify(string Name)
@@ -140,8 +129,9 @@ namespace Client
             else
                 lbComment.Text = "Tới lượt của " + Name;
         }
-        public void Game_Update(string Character) //UPDATE UI
+        public void Game_Update(string Character) //UPDATE UI 
         {
+            //Cap nhat an di o chu ma nguoi choi khac da chon
             foreach (Control control in Controls)
             {
                 if (control is Button && control.Tag != null && control.Tag.ToString() == "Character")
@@ -150,6 +140,7 @@ namespace Client
             }
             show_ans(Character);
 
+            //Kiem tra o chu da duoc dien day du hay chua
             int count_showed = 0;
             foreach (Control control in Controls)
             {
@@ -160,11 +151,14 @@ namespace Client
             }
             if (count_showed == answer.Length)
             {
+                //Gui totalScore cua player hien tai cho Server khi vong choi ket thuc
                 Player.totalScore += int.Parse(tbScore.Text);
                 Client_Socket.datatype = "TOTAL_SCORE";
                 Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());
             }
         }
+
+        //Cap nhat diem cua nguoi choi khac khi co thay doi
         public void Score_Update(string Name, string Score)
         {
             foreach (Control control in Controls)
@@ -174,6 +168,7 @@ namespace Client
             }
         }
         
+        //Ham Private
         //An chon vong quay
         private void btWheel_Click(object sender, EventArgs e)
         {
@@ -189,7 +184,7 @@ namespace Client
                 allowState_button(false);
             }
             else
-            {
+            {                
                 foreach (Control control in Controls)
                 {
                     if (control is Button && control.Name != "btWheel")
@@ -209,7 +204,7 @@ namespace Client
             else
                 btWheel.Enabled = true;
         }       
-        //check  dap an va comment 
+        //Check dap an va comment 
         private bool comment(string t)
         {
             
@@ -231,6 +226,7 @@ namespace Client
                 Thread.Sleep(100);
                 Client_Socket.SendMessage(t);
 
+                //Don't enable the wheel
                 changeState_wheel(false);
                 return true;
             }                
@@ -239,10 +235,12 @@ namespace Client
                 // Neu nguoi choi chon sai, mat luot, chuyen sang luot choi cua nguoi choi tiep theo 
                 score = Player.score;
                 lbComment.Text = "Không có ký tự " + t + " nào trong đáp án, bạn bị mất lượt ";                
+
                 Client_Socket.datatype = "CHOOSE_WRONG";                
                 Thread.Sleep(100);
                 Client_Socket.SendMessage(t);
 
+                //Enable the wheel
                 changeState_wheel(true);
                 return false;
             }
@@ -288,7 +286,7 @@ namespace Client
             {
                 foreach (Control control in Controls)
                 {
-                    if (control is Button) // && control.Tag != null && (control.Tag.ToString() == "Character" || control.Name == "btWheel"))
+                    if (control is Button)
                         control.Enabled = false;                    
                 }
             }
@@ -357,11 +355,6 @@ namespace Client
             }
             allowState_button(false);
         }
-
-        private void ClientView_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           /* Client_Socket.datatype = "DISCONNECT";
-            Client_Socket.SendMessage(Player.name);*/
-        }
+        
     }
 }
