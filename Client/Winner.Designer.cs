@@ -38,7 +38,7 @@ namespace Client
             this.lbWinnerName.BackColor = System.Drawing.Color.Transparent;
             this.lbWinnerName.Font = new System.Drawing.Font("Microsoft Himalaya", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWinnerName.ForeColor = System.Drawing.Color.Maroon;
-            this.lbWinnerName.Location = new System.Drawing.Point(264, 246);
+            this.lbWinnerName.Location = new System.Drawing.Point(250, 248);
             this.lbWinnerName.Name = "lbWinnerName";
             this.lbWinnerName.Size = new System.Drawing.Size(116, 56);
             this.lbWinnerName.TabIndex = 1;

@@ -14,7 +14,7 @@ namespace Client
     public partial class Lobby : Form
     {
         public Lobby lobby;
-        public List<PictureBox> PlayerIcon = new List<PictureBox>();
+        public List<PictureBox> PlayerIcons = new List<PictureBox>();
         public int connectedPlayer = 0;
         public Lobby()
         {
@@ -23,6 +23,10 @@ namespace Client
             CheckForIllegalCrossThreadCalls = false;
             lobby = this;
             btStart.Visible = false;
+
+            PlayerIcons.Add(pictureBoxP1);
+            PlayerIcons.Add(pictureBoxP2);
+            PlayerIcons.Add(pictureBoxP3);
         }
         public void ShowStartButton()
         {
@@ -37,7 +41,9 @@ namespace Client
         }
         public void DisplayConnectedPlayer(string name)
         {
-            connectedPlayer++;            
+            PlayerIcons[connectedPlayer].Image = Properties.Resources.avatar_default_icon;
+            PlayerIcons[connectedPlayer].SizeMode = PictureBoxSizeMode.StretchImage;
+            connectedPlayer++;                        
             switch (connectedPlayer)
             {
                 case 1:
@@ -61,6 +67,8 @@ namespace Client
         
         private void btLeave_Click(object sender, EventArgs e)
         {
+            connectedPlayer--;            
+            
             this.Close();
         }
     }

@@ -73,6 +73,16 @@ namespace Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatar_default_icon {
+            get {
+                object obj = ResourceManager.GetObject("avatar_default_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bgclient {
             get {
                 object obj = ResourceManager.GetObject("bgclient", resourceCulture);
@@ -106,6 +116,16 @@ namespace Client.Properties {
         internal static System.Drawing.Bitmap Wheel_BG {
             get {
                 object obj = ResourceManager.GetObject("Wheel_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wheel_BG_2 {
+            get {
+                object obj = ResourceManager.GetObject("Wheel_BG_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

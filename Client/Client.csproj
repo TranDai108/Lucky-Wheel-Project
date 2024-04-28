@@ -149,5 +149,11 @@
   <ItemGroup>
     <None Include="Resources\Wheel BG.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-default-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wheel BG_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
