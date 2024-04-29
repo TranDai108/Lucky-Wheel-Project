@@ -153,7 +153,7 @@ namespace Client
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1079, 8);
+            this.label5.Location = new System.Drawing.Point(1088, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 25);
             this.label5.TabIndex = 2;

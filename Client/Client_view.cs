@@ -282,7 +282,7 @@ namespace Client
         //Chuyen trang thai button (enable / disable)
         private void allowState_button(bool check)
         {
-            if(check == false) // tra loi sai khong duoc chon dap an nua
+            if(check == false) // Tra loi sai khong duoc chon dap an nua
             {
                 foreach (Control control in Controls)
                 {
@@ -290,7 +290,7 @@ namespace Client
                         control.Enabled = false;                    
                 }
             }
-            else // tra loi dung lan luot thuc hien quay vong quay roi moi chon dap an
+            else // Tra loi dung lan luot thuc hien quay vong quay roi moi chon dap an
             {
                 foreach (Control control in Controls)
                 {

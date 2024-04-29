@@ -32,7 +32,8 @@ namespace Server
         public Server()
         {
             InitializeComponent();
-            IPAddress ipAddress = GetLocalIPAddress();
+            //IPAddress ipAddress = GetLocalIPAddress();
+            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint serverEP = new IPEndPoint(ipAddress, 11000);
             serverSocket.Bind(serverEP);
@@ -81,11 +82,6 @@ namespace Server
         public static void AnalyzingMess(string mess, Player p)
         {
             string[] arrPayload = mess.Split(';');
-
-            //arrPayload[0]: always indicates client's message type ( using for different types of reply )
-            //arrPayload[1]: always indicates the name of client
-            //arrPayload[..]: .... ( depends on client's message type )
-
 
             switch (arrPayload[0])
             {
@@ -230,6 +226,7 @@ namespace Server
                     {
                         foreach (var player in connectedPlayers)
                         {
+                            // Update Name + Score
                             byte[] buffer = Encoding.UTF8.GetBytes("SCORE_UPDATE;" + arrPayload[1] + ";" + arrPayload[2]);
                             player.playerSocket.Send(buffer);
                         }
@@ -246,7 +243,7 @@ namespace Server
                     break;
                 case "WIN_ROUND":
                     {
-                        //Tuong tu buoc set up tuy nhien phai cap nhat them vong choi tiep theo
+                        // Tuong tu buoc set up tuy nhien phai cap nhat them vong choi tiep theo
                         currentround++;
                         if(currentround > 3)
                         {                                                        
