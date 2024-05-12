@@ -65,8 +65,8 @@ namespace Client
             this.lbStart.AutoSize = true;
             this.lbStart.BackColor = System.Drawing.Color.Transparent;
             this.lbStart.Font = new System.Drawing.Font("Palatino Linotype", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbStart.ForeColor = System.Drawing.Color.Beige;
-            this.lbStart.Location = new System.Drawing.Point(193, 438);
+            this.lbStart.ForeColor = System.Drawing.Color.Yellow;
+            this.lbStart.Location = new System.Drawing.Point(174, 427);
             this.lbStart.Name = "lbStart";
             this.lbStart.Size = new System.Drawing.Size(500, 55);
             this.lbStart.TabIndex = 2;

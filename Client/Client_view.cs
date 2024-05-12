@@ -177,6 +177,7 @@ namespace Client
             wheel.ShowDialog();
             wheel_res = wheel.get_res();
             ScoreHandle(wheel_res);
+            //Xu ly truong hop dac biet
             if(wheel_res == "Mất lượt")
             {
                 Client_Socket.datatype = "ENDTURN";
@@ -317,7 +318,7 @@ namespace Client
             if (count_showed == answer.Length)
             {
                 Player.totalScore += int.Parse(tbScore.Text);
-                MessageBox.Show("Bạn đã chiến thắng vòng chơi này !", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Bạn đã hoàn thành vòng chơi này !", "Thông báo", MessageBoxButtons.OK);
                 Thread.Sleep(1500);
                 Client_Socket.datatype = "WIN_ROUND";
                 Client_Socket.SendMessage(Player.name + ";" + Player.totalScore.ToString());                                                                

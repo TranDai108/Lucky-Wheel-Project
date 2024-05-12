@@ -31,8 +31,7 @@ namespace Server
         private static string questionPath;
         public Server()
         {
-            InitializeComponent();
-            //IPAddress ipAddress = GetLocalIPAddress();
+            InitializeComponent();            
             IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint serverEP = new IPEndPoint(ipAddress, 11000);
@@ -40,20 +39,7 @@ namespace Server
             serverSocket.Listen(3);
             rtbServer.Text += "Chờ đợi kết nối từ người chơi ... \r\n";         
         }
-        static IPAddress GetLocalIPAddress()
-        {
-            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
-
-            foreach (IPAddress ip in host.AddressList)
-            {
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return ip;
-                }
-            }
-
-            throw new Exception("No network adapters with an IPv4 address in the system!");
-        }
+        
         public void recvfromClientsocket(Socket client)
         {
             
@@ -413,6 +399,22 @@ namespace Server
             if(clientThread != null)
                 clientThread.Abort();
         }
+
+        /*static IPAddress GetLocalIPAddress()
+        {
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip;
+                }
+
+            }
+
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }*/
     }
 }
 
