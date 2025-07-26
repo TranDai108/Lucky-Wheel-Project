@@ -1,6 +1,6 @@
 # 🎡 Lucky Wheel – Multiplayer Word Puzzle Game
 
-A networked multiplayer word puzzle game inspired by the classic TV show "Wheel of Fortune", built with C# and WinForms as a basic network programming assignment.
+Lucky Wheel is a networked multiplayer word puzzle game inspired by the classic TV show "Wheel of Fortune" (Vietnamese version "Chiếc nón kỳ diệu"). The game allows up to 3 players to compete in guessing letters to solve word puzzles across multiple rounds, with a spinning wheel that adds an element of chance to their score. This project was developed in C# as a basic network programming assignment, demonstrating socket programming and a simple client-server architecture.
 
 <div align="center">
   <img src="https://img.shields.io/badge/Language-C%23-blueviolet?style=for-the-badge&logo=c-sharp" alt="Language C#">
@@ -94,18 +94,18 @@ In this game, players take turns spinning a lucky wheel to receive a random scor
 
 | Login Screen                                   | Game Lobby                                 | Gameplay Screen                                |
 | ---------------------------------------------- | ------------------------------------------ | ---------------------------------------------- |
-| ![Login Screen](URL_TO_LOGIN_SCREENSHOT.png)   | ![Lobby Screen](URL_TO_LOBBY_SCREENSHOT.png)| ![Gameplay Screen](URL_TO_GAMEPLAY_SCREENSHOT.png) |
+| ![Login Screen](./Img/Login_Screen.png)   | ![Lobby Screen](./Img/Lobby.png)| ![Gameplay Screen](./Img/Gameplay.png) |
 | **Wheel Spin Popup** | **Winner Announcement** |                                                |
-| ![Wheel Spin](URL_TO_WHEEL_SPIN_SCREENSHOT.png)| ![Winner](URL_TO_WINNER_SCREENSHOT.png)    |                                                |
+| ![Wheel Spin](./Img/Spin_Wheel.png)| ![Winner](./Img/Winner.png)    |                                                |
 
 
 ## 👨‍💻 Authors / Credits
 
 This game was developed as a networking course project by **Team 17, UIT**:
 
--   **Trần Phước Đại** – Developer (Socket integration, system design)
+-   **Trần Phước Đại** – Developer (Socket integration, system design, UI logic, UI design)
 -   **Lê Ngọc Kiều Anh** – Developer (UI design, game logic)
--   **Đồng Tài Đức** – Developer (Socket functions support, UI logic)
+-   **Đồng Tài Đức** – Developer (Socket functions support)
 
 Special thanks to the instructor **Đặng Lê Bảo Chương** for guidance and to the original "Chiếc nón kỳ diệu" game show for the inspiration.
 
