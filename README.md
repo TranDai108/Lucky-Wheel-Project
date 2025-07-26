@@ -90,8 +90,6 @@ In this game, players take turns spinning a lucky wheel to receive a random scor
 
 ## 📸 Screenshots
 
-*(Add your actual screenshots here by replacing the URLs)*
-
 | Login Screen                                   | Game Lobby                                 | Gameplay Screen                                |
 | ---------------------------------------------- | ------------------------------------------ | ---------------------------------------------- |
 | ![Login Screen](./Img/Login_Screen.png)   | ![Lobby Screen](./Img/Lobby.png)| ![Gameplay Screen](./Img/Gameplay.png) |
